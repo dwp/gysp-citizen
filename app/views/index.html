@@ -10,19 +10,63 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-      Most recent prototypes
+    Citizen prototype
       </h1>
-      <p>
-        Most up to date Get your State Pension citizen prototype
-      </p>
-      <div class="app-most-recent">
-        {% include 'notes/sprint90.html' %}
+
+      <p class="govuk-body-l"><b>Example invitation code:</b> SMIT309UJ4 </p>
+
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Claim from date
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <div class="app-most-recent">
+              {% include 'notes/claimdate.html' %}
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Payment frequency
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <div class="app-most-recent">
+              {% include 'notes/sprint90.html' %}
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Basic prototype
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <div class="app-most-recent">
+              {% include 'notes/sprint89.html' %}
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="app-most-recent">
-        {% include 'notes/sprint89.html' %}
-      </div>
- 
-      
+
+
+
     </div>
   </div>
 
