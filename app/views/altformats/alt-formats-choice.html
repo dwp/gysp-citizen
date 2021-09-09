@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="bank" >
+
+  <a href="marital-status" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+    How else would you like us to contact you?
+      </h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="alt-hint">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="alt" name="alt" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="alt">
+              Audio form
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="alt-2" name="alt" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="alt-2">
+              Audio CD, cassette or MP3
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="alt-3" name="alt" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="alt-3">
+              Braille
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="alt-4" name="alt" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="alt-4">
+              Large print
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="alt-5" name="alt" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="alt-5">
+              TypeTalk
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="alt-6" name="alt" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="alt-6">
+              Relay UK
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include 'includes/parts/help.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+{% endblock %}
