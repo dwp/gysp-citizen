@@ -30,7 +30,7 @@ router.post('/altformats/contact', (req, res) => {
 
   // Alt formats yes/no
   router.post('/altformats/alt-formats', function(req, res) {
-    if ( req.body['alt-formats'] === 'yes' ) {
+    if (req.body['alt-formats'] === 'yes') {
       res.redirect('alt-formats-choice');
     } else {
       res.redirect('bank');
