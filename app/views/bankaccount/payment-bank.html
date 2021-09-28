@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="payment-bank">
+<form method="post">
 
   <a href="frequency" class="govuk-back-link">Back</a>
 
@@ -22,27 +22,15 @@ GOV.UK Prototype Kit
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="payment-bank" name="payment-bank" type="radio" value="england">
+              <input class="govuk-radios__input" id="payment-bank" name="payment-bank" type="radio" value="my-bank">
               <label class="govuk-label govuk-radios__label" for="payment-bank">
-                England
+              The bank account I just told you about
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="payment-bank-2" name="payment-bank" type="radio" value="scotland">
+              <input class="govuk-radios__input" id="payment-bank-2" name="payment-bank" type="radio" value="another-bank">
               <label class="govuk-label govuk-radios__label" for="payment-bank-2">
-                Scotland
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="payment-bank-3" name="payment-bank" type="radio" value="wales">
-              <label class="govuk-label govuk-radios__label" for="payment-bank-3">
-                Wales
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="payment-bank-4" name="payment-bank" type="radio" value="northern-ireland">
-              <label class="govuk-label govuk-radios__label" for="payment-bank-4">
-                Northern Ireland
+                Another magical mystery unicorn account
               </label>
             </div>
           </div>
