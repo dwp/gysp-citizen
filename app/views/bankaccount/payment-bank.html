@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="payment-bank">
+
+  <a href="frequency" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Where would you like us to pay your State Pension?
+      </h1>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="payment-bank" name="payment-bank" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="payment-bank">
+                England
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="payment-bank-2" name="payment-bank" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="payment-bank-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="payment-bank-3" name="payment-bank" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="payment-bank-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="payment-bank-4" name="payment-bank" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="payment-bank-4">
+                Northern Ireland
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+        </div>
+
+
+
+
+
+    <div class="column-one-third">
+      {% include 'includes/parts/help.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+  {% endblock %}
