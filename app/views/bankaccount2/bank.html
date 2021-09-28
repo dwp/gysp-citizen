@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="payment-bank">
+<form method="post">
 
   <a href="frequency" class="govuk-back-link">Back</a>
 
@@ -14,11 +14,8 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        YOUR bank details
+        Where would you like us to pay your State Pension?
       </h1>
-
-        <p>Tell us your bank details, even if you don't want paid here because we need to check you are you.</p>
-
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="name-on-the-account">
@@ -55,6 +52,35 @@ GOV.UK Prototype Kit
           </div>
           <input class="govuk-input govuk-input--width-10" id="roll-number" name="roll-number" type="text" spellcheck="false" aria-describedby="roll-number-hint">
         </div>
+
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="payment-bank-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Do you want to be paid into this bank account?
+      </h1>
+    </legend>
+    <div id="payment-bank-hint" class="govuk-hint">
+    You can be paid in someone elses bank account...
+    </div>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="payment-bank" name="payment-bank" type="radio" value="my-bank">
+        <label class="govuk-label govuk-radios__label" for="payment-bank">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="payment-bank-2" name="payment-bank" type="radio" value="other-bank">
+        <label class="govuk-label govuk-radios__label" for="payment-bank-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
 
         <button class="govuk-button" data-module="govuk-button">
           Continue

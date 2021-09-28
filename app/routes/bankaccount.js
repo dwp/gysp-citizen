@@ -38,5 +38,15 @@ router.post('/bankaccount/contact', (req, res) => {
   });
 
 
+  // Payment bank
+  router.post('/bankaccount/payment-bank', function(req, res) {
+    if (req.body['payment-bank'] === 'my-bank') {
+      res.redirect('check-answers');
+    } else {
+      res.redirect('other-bank');
+    }
+  });
+
+
 
   module.exports = router;
