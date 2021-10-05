@@ -38,14 +38,25 @@ router.post('/bankaccount2/contact', (req, res) => {
   });
 
   // Payment bank
-  router.post('/bankaccount2/bank', function(req, res) {
-    if (req.body['payment-bank'] === 'my-bank') {
-      res.redirect('check-answers');
-    } else {
-      res.redirect('other-bank');
-    }
-  });
+  router.post('/bankaccount2/bank', (req, res) => {
+    res.redirect('/bankaccount2/claimant-bank')
+  })
+  ;
 
+  router.post('/bankaccount2/claimant-bank', (req, res) => {
+    res.redirect('/bankaccount2/check-answers')
+  })
+  ;
+
+  router.post('/bankaccount2/check-answers', (req, res) => {
+    res.redirect('/bankaccount2/declaration')
+  })
+  ;
+
+  router.post('/bankaccount2/declaration', (req, res) => {
+    res.redirect('/bankaccount2/complete')
+  })
+  ;
 
 
   module.exports = router;
