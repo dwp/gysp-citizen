@@ -14,22 +14,27 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        We need to check your identity, how shall we?
+        How would you like us to confirm your identity?
       </h1>
 
-      <p>As you want to be paid into a bank account that doesn't belong to you, we need to do some additional security checks...</p>
+      <div class="govuk-inset-text">
+        This is because the account you want to be paid into does not match your name.
+      </div> 
+      <!--  <p>As you want to be paid into a bank account that doesn't belong to you, we need to do some additional security checks...</p>-->
+
+     
 
       <div class="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="identity-bank-check" name="identity" type="radio" value="bank-check">
           <label class="govuk-label govuk-radios__label" for="identity-bank-check">
-            Bank check...
+            I will enter my personal bank details on the next screen
           </label>
         </div>
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="identity-call" name="identity" type="radio" value="call">
           <label class="govuk-label govuk-radios__label" for="identity-call">
-            Phone call...
+            The DWP State Pension team can phone me
           </label>
         </div>
       </div>
