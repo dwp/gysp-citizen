@@ -33,20 +33,39 @@ router.post('/bankaccount/contact', (req, res) => {
     if (req.body['alt-formats'] === 'yes') {
       res.redirect('alt-formats-choice');
     } else {
-      res.redirect('bank');
+      res.redirect('payment-bank');
     }
   });
 
 
-  // Payment bank
-  router.post('/bankaccount/payment-bank', function(req, res) {
-    if (req.body['payment-bank'] === 'my-bank') {
+  router.post('/bankaccount/payment-bank', (req, res) => {
+    res.redirect('/bankaccount/identity')
+  })
+  ;
+
+  router.post('/bankaccount/identity', function(req, res) {
+    if (req.body['identity'] === 'call') {
       res.redirect('check-answers');
     } else {
-      res.redirect('other-bank');
+      res.redirect('security-bank');
     }
   });
 
+  router.post('/bankaccount/security-bank', (req, res) => {
+    res.redirect('/bankaccount/check-answers')
+  })
+  ;
+
+
+  router.post('/bankaccount/check-answers', (req, res) => {
+    res.redirect('/bankaccount/declaration')
+  })
+  ;
+
+  router.post('/bankaccount/declaration', (req, res) => {
+    res.redirect('/bankaccount/complete')
+  })
+  ;
 
 
   module.exports = router;
