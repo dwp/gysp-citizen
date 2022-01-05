@@ -18,6 +18,15 @@ router.post('/additionalsecurity/prison', (req, res) => {
 })
 ;
 
+// Alt formats yes/no
+router.post('/additionalsecurity/alt-formats', function(req, res) {
+  if (req.body['alt-formats'] === 'yes') {
+    res.redirect('alt-formats-choice');
+  } else {
+    res.redirect('payment-bank');
+  }
+});
+
 router.post('/additionalsecurity/lived-abroad', (req, res) => {
   res.redirect('/additionalsecurity/worked-abroad')
 })
