@@ -59,22 +59,10 @@ router.post('/additionalsecurity/contact', (req, res) => {
 
 
   router.post('/additionalsecurity/payment-bank', (req, res) => {
-    res.redirect('/additionalsecurity/identity')
+    res.redirect('/additionalsecurity/security-check')
   })
   ;
 
-  router.post('/additionalsecurity/identity', function(req, res) {
-    if (req.body['identity'] === 'call') {
-      res.redirect('check-answers');
-    } else {
-      res.redirect('security-bank');
-    }
-  });
-
-  router.post('/additionalsecurity/security-bank', (req, res) => {
-    res.redirect('/additionalsecurity/check-answers')
-  })
-  ;
 
 
   router.post('/additionalsecurity/check-answers', (req, res) => {
