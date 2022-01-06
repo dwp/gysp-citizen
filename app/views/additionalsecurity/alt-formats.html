@@ -8,7 +8,10 @@ GOV.UK Prototype Kit
 
 <form method="post">
 
-  <a href="marital-status" class="govuk-back-link">Back</a>
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+                    }) }}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -21,7 +24,7 @@ GOV.UK Prototype Kit
       <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="alt-formats-hint">
     <div id="alt-formats-hint" class="govuk-hint">
-      For example: audio forms, braille, email, large print, Relay UK, Typetalk 
+      For example: audio forms, braille, email, large print, Relay UK, Typetalk
     </div>
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">

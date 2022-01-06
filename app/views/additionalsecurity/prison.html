@@ -6,7 +6,10 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="lived-abroad">
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.go(-1)"
+                  }) }}
 
   <a href="your-details" class="govuk-back-link">Back</a>
 
@@ -23,7 +26,7 @@ GOV.UK Prototype Kit
           </legend>
           <br>
           <div id="prison-hint" class="govuk-hint">
-          
+
           </div>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">

@@ -6,7 +6,10 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="question-1">
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.go(-1)"
+                  }) }}
 
   <a href="frequency" class="govuk-back-link">Back</a>
 
