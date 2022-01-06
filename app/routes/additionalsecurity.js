@@ -70,6 +70,31 @@ router.post('/additionalsecurity/contact', (req, res) => {
   })
   ;
 
+  router.post('/additionalsecurity/security-check', (req, res) => {
+    res.redirect('/additionalsecurity/question-1')
+  })
+  ;
+
+  router.post('/additionalsecurity/question-1', (req, res) => {
+    res.redirect('/additionalsecurity/question-2')
+  })
+  ;
+
+  router.post('/additionalsecurity/question-2', (req, res) => {
+    res.redirect('/additionalsecurity/question-3')
+  })
+  ;
+
+  router.post('/additionalsecurity/question-3', (req, res) => {
+    res.redirect('/additionalsecurity/check-successful')
+  })
+  ;
+
+  router.post('/additionalsecurity/check-successful', (req, res) => {
+    res.redirect('/additionalsecurity/check-answers')
+  })
+  ;
+
 
 
   router.post('/additionalsecurity/check-answers', (req, res) => {
