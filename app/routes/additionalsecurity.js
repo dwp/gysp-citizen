@@ -58,6 +58,13 @@ router.post('/additionalsecurity/contact', (req, res) => {
   });
 
 
+
+  router.post('/additionalsecurity/alt-formats-choice', (req, res) => {
+    res.redirect('/additionalsecurity/payment-bank')
+  })
+  ;
+
+
   router.post('/additionalsecurity/payment-bank', (req, res) => {
     res.redirect('/additionalsecurity/security-check')
   })
