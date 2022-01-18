@@ -27,16 +27,23 @@ router.post('/additionalsecurity/alt-formats', function(req, res) {
   }
 });
 
-router.post('/additionalsecurity/lived-abroad', (req, res) => {
-  res.redirect('/additionalsecurity/worked-abroad')
-})
-;
+// Lived abroad yes/no
+router.post('/additionalsecurity/lived-abroad', function(req, res) {
+  if (req.body['lived-abroad'] === 'yes') {
+    res.redirect('countries-lived');
+  } else {
+    res.redirect('worked-abroad');
+  }
+});
 
-
-router.post('/additionalsecurity/worked-abroad', (req, res) => {
-  res.redirect('/additionalsecurity/marital-status')
-})
-;
+// Worked abroad yes/no
+router.post('/additionalsecurity/worked-abroad', function(req, res) {
+  if (req.body['worked-abroad'] === 'yes') {
+    res.redirect('countries-worked');
+  } else {
+    res.redirect('marital-status');
+  }
+});
 
 router.post('/additionalsecurity/marital-status', (req, res) => {
   res.redirect('/additionalsecurity/contact')
