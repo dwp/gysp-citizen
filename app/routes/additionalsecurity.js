@@ -45,10 +45,30 @@ router.post('/additionalsecurity/worked-abroad', function(req, res) {
   }
 });
 
-router.post('/additionalsecurity/marital-status', (req, res) => {
-  res.redirect('/additionalsecurity/contact')
-})
-;
+
+//marital
+router.post('/additionalsecurity/marital-status', function(req, res) {
+  if (req.body['marital-status'] === 'married') {
+    res.redirect('marital-details');
+  }
+  else if (req.body['marital-status'] === 'divorced') {
+    res.redirect('divorce-details');
+  }
+  else if (req.body['marital-status'] === 'civil') {
+    res.redirect('civil-partnership-details');
+  }
+  else if (req.body['marital-status'] === 'dissolved') {
+    res.redirect('ex-civil-partner-details');
+  }
+  else if (req.body['marital-status'] === 'widowed') {
+    res.redirect('late-spouse-details');
+  }
+  else {
+    res.redirect('/additionalsecurity/contact');
+  }
+});
+
+
 
 router.post('/additionalsecurity/contact', (req, res) => {
   res.redirect('/additionalsecurity/alt-formats')
