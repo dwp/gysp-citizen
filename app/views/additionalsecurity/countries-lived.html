@@ -16,13 +16,30 @@ GOV.UK Prototype Kit
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form id="countries" action="what-countries-have-you-lived-in" method="post">
-                <fieldset id="country-type-ahead">
-                  <div class="form-group">
-                    <label class="form-label" for="country-name-1">Country name <span class="remove-link"></span></label>
-                    <input class="form-control country-name" id="country-name-1" type="text" name="country-name-1" autocomplete="off">
+<form id="countries" action="what-countries-have-you-lived-in" method="post">
 
-                    <div class="country-list" style="display:none;">
+
+
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="countries">
+                What countries have you lived in?
+              </label>
+            </h1>
+
+
+          </div>
+
+
+
+
+                <fieldset id="accessible-autocomplete">
+                  <div class="form-group">
+
+ <input class="govuk-input govuk-input--width-10 " id="postcode" name="postcode" type="text" autocomplete="postal-code">
+
+                    <label class="form-label" for="country-name-1">Country name <span class="remove-link"></span></label>
+                    <input class="accessible-autocomplete country-name" id="country-name-1" type="text" name="country-name-1" autocomplete="on">
+                    <div class="accessible-autocomplete" style="display:none;">
                     </div>
                   </div>
                 </fieldset>
