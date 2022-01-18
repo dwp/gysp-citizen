@@ -27,27 +27,19 @@ GOV.UK Prototype Kit
             </h1>
 
 
-            <select id="location-picker">
-              <option value="fr">France</option>
-              <option value="de">Germany</option>
-              <option value="gb">United Kingdom</option>
-            </select>
-
-
-
-
-
           </div>
 
 
 
 
-                <fieldset id="country-type-ahead">
+                <fieldset id="accessible-autocomplete">
                   <div class="form-group">
-                    <label class="form-label" for="country-name-1">Country name <span class="remove-link"></span></label>
-                    <input class="form-control country-name" id="country-name-1" type="text" name="country-name-1" autocomplete="off">
 
-                    <div class="country-list" style="display:none;">
+ <input class="govuk-input govuk-input--width-10 " id="postcode" name="postcode" type="text" autocomplete="postal-code">
+
+                    <label class="form-label" for="country-name-1">Country name <span class="remove-link"></span></label>
+                    <input class="accessible-autocomplete country-name" id="country-name-1" type="text" name="country-name-1" autocomplete="on">
+                    <div class="accessible-autocomplete" style="display:none;">
                     </div>
                   </div>
                 </fieldset>
