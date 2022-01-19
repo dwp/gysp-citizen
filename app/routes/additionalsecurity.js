@@ -122,6 +122,11 @@ router.post('/additionalsecurity/contact', (req, res) => {
   })
   ;
 
+  router.post('/additionalsecurity/check-failed', (req, res) => {
+    res.redirect('/additionalsecurity/check-answers')
+  })
+  ;
+
 
 
   router.post('/additionalsecurity/check-answers', (req, res) => {
