@@ -65,10 +65,12 @@ GOV.UK Prototype Kit
           </dt>
           <dd class="govuk-summary-list__value">
             {% if data.marital === 'widowed' %} Widowed
-            {% elseif data.marital === 'married' %} Married
+            {% elseif data.marital === 'married' %} Married<br>
+            {{data['marriage-date-day']}}/{{data['marriage-date-month']}}/{{data['marriage-date-year']}}
             {% elseif data.marital === 'dissolved' %} Dissolved civil partnership
             {% elseif data.marital === 'divorced' %} Divorced
             {% elseif data.marital === 'civil' %} Civil partnership
+            {{data['civil-date-day']}}/{{data['civil-date-month']}}/{{data['civil-date-year']}}
             {% else %} Never been married{% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -77,6 +79,107 @@ GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
+
+
+{% if data.marital === 'married' %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            About your spouse
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">
+                {{data['spouse-name']}} {{data['spouse-surname']}}<br>
+                {{data['spouse-dob-day']}}/{{data['spouse-dob-month']}}/{{data['spouse-dob-year']}}
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+  {% endif %}
+
+
+  {% if data.marital === 'widowed' %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              About your late spouse
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">
+                  {{data['late-spouse-name']}} {{data['late-spouse-surname']}}<br>
+                  {{data['late-spouse-dob-day']}}/{{data['late-spouse-dob-month']}}/{{data['late-spouse-dob-year']}}
+              </p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> </span>
+              </a>
+            </dd>
+          </div>
+    {% endif %}
+
+    {% if data.marital === 'divorced' %}
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                About your ex spouse
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">
+                    {{data['ex-spouse-name']}} {{data['ex-spouse-surname']}}<br>
+                    {{data['ex-spouse-dob-day']}}/{{data['ex-spouse-dob-month']}}/{{data['ex-spouse-dob-year']}}
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+      {% endif %}
+
+
+    {% if data.marital === 'ex-civil' %}
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                About your ex civil partner
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">
+                    {{data['ex-civil-name']}} {{data['ex-civil-surname']}}<br>
+                    {{data['ex-civil-dob-day']}}/{{data['ex-civil-dob-month']}}/{{data['ex-civil-dob-year']}}
+                </p>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+      {% endif %}
+
+  {% if data.marital === 'civil' %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              About your civil partner
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">
+                {{data['civil-name']}} {{data['civil-surname']}}<br>
+                {{data['civil-dob-day']}}/{{data['civil-dob-month']}}/{{data['civil-dob-year']}}
+              </p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+    {% endif %}
+
+
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Contact details
