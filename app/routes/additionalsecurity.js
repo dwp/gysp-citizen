@@ -61,13 +61,32 @@ router.post('/additionalsecurity/marital-status', function(req, res) {
     res.redirect('ex-civil-partner-details');
   }
   else if (req.body['marital-status'] === 'widowed') {
-    res.redirect('late-spouse-details');
+    res.redirect('marital-details-late-spouse');
   }
   else {
     res.redirect('/additionalsecurity/contact');
   }
 });
 
+router.post('/additionalsecurity/marital-details-late-spouse', (req, res) => {
+  res.redirect('/additionalsecurity/late-spouse-details')
+})
+;
+
+router.post('/additionalsecurity/marital-details', (req, res) => {
+  res.redirect('/additionalsecurity/spouse-details')
+})
+;
+
+router.post('/additionalsecurity/spouse-details', (req, res) => {
+  res.redirect('/additionalsecurity/contact')
+})
+;
+
+router.post('/additionalsecurity/late-spouse-details', (req, res) => {
+  res.redirect('/additionalsecurity/contact')
+})
+;
 
 
 router.post('/additionalsecurity/contact', (req, res) => {
