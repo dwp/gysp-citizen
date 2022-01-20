@@ -30,7 +30,11 @@ GOV.UK Prototype Kit
             Lived outside the UK
           </dt>
           <dd class="govuk-summary-list__value">
+            {% if data['lived-outside'] === 'Yes' %}
+            Yes
+            {% else %}
             No
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -43,7 +47,11 @@ GOV.UK Prototype Kit
             Worked outside the UK
           </dt>
           <dd class="govuk-summary-list__value">
+            {% if data['worked-outside'] === 'Yes' %}
+            Yes
+            {% else %}
             No
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -56,7 +64,12 @@ GOV.UK Prototype Kit
             Current marital status
           </dt>
           <dd class="govuk-summary-list__value">
-            Never been married
+            {% if data.marital === 'widowed' %} Widowed
+            {% elseif data.marital === 'married' %} Married
+            {% elseif data.marital === 'dissolved' %} Dissolved civil partnership
+            {% elseif data.marital === 'divorced' %} Divorced
+            {% elseif data.marital === 'civil' %} Civil partnership
+            {% else %} Never been married{% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -69,9 +82,22 @@ GOV.UK Prototype Kit
             Contact details
           </dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body">07700 900457</p>
-            <p class="govuk-body">07892 099921</p>
-            <p class="govuk-body">sarah.phillips@example.com</p>
+            <p class="govuk-body">
+              {% if data['home'] %}
+                  Home phone number:{{data['home']}}<br>
+              {% endif %}
+
+              {% if data['mobile'] %}
+                  Mobile phone number:{{data['mobile']}}<br>
+              {% endif %}
+
+                {% if data['work'] %}
+                    Work phone number:{{data['work']}}<br>
+                {% endif %}
+
+                {% if data['email'] %}
+                    Email address: {{data['email']}}<br>
+                {% endif %}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -79,38 +105,6 @@ GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
-
-       <!--  <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Payment frequency
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body">Every 2 weeks</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Building society detials
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body">Miss Sarah Phillips</p>
-            <p class="govuk-body">004030</p>
-            <p class="govuk-body">09836623</p>
-            <p class="govuk-body">CXJ-K6 897/98X</p>
-
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </dd>
-        </div> -->
       </dl>
 
       <button class="govuk-button" data-module="govuk-button">

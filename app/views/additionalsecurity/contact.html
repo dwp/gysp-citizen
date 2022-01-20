@@ -32,45 +32,47 @@ GOV.UK Prototype Kit
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="home phone" data-aria-controls="conditional-contact">
-              <label class="govuk-label govuk-checkboxes__label" for="contact">
+              <input class="govuk-checkboxes__input" id="contact" name="home-phone" type="checkbox" value="home-phone" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-checkboxes__label" for="home-phone">
                 Home phone
               </label>
             </div>
             <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
               <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-home">
+                <label class="govuk-label" for="home-phone">
                   Home phone number
                 </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
+                <input class="govuk-input govuk-!-width-one-third" id="home-phone" name="home" type="tel" spellcheck="false" autocomplete="tel"></div>
 
             </div>
+
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="mobile" data-aria-controls="conditional-contact-2">
-              <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+              <input class="govuk-checkboxes__input" id="contact" name="mobile-phone" type="checkbox" value="mobile-phone" data-aria-controls="conditional-contact-mobile">
+              <label class="govuk-label govuk-checkboxes__label" for="mobile-phone">
                 Mobile phone
               </label>
             </div>
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-mobile">
               <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-mobile">
+                <label class="govuk-label" for="mobile-phone">
                   Mobile phone number
                 </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
+                <input class="govuk-input govuk-!-width-one-third" id="mobile-phone" name="mobile" type="tel" spellcheck="false" autocomplete="tel"></div>
 
             </div>
+
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="work phone" data-aria-controls="conditional-contact-3">
-              <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+              <input class="govuk-checkboxes__input" id="work" name="contact" type="checkbox" value="work" data-aria-controls="conditional-contact-work">
+              <label class="govuk-label govuk-checkboxes__label" for="work">
               Work phone
               </label>
             </div>
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-work">
               <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-work">
+                <label class="govuk-label" for="contact-work">
                   Work phone number
                 </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel"></div>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-work" name="work" type="tel" autocomplete="tel"></div>
 
             </div>
           </div>
@@ -87,7 +89,7 @@ GOV.UK Prototype Kit
             <p class="govuk-hint">We'll use this to confirm we've received your application.</p>
           </label>
         </h1>
-        <input class="govuk-input govuk-input--width-20" type="text">
+ <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
       </div>
 
       <button class="govuk-button" data-module="govuk-button">
