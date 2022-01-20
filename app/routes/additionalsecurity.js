@@ -52,13 +52,13 @@ router.post('/additionalsecurity/marital-status', function(req, res) {
     res.redirect('marital-details');
   }
   else if (req.body['marital-status'] === 'divorced') {
-    res.redirect('divorce-details');
+    res.redirect('marital-details-divorce');
   }
   else if (req.body['marital-status'] === 'civil') {
-    res.redirect('civil-partnership-details');
+    res.redirect('marital-details-civil-partner');
   }
   else if (req.body['marital-status'] === 'dissolved') {
-    res.redirect('ex-civil-partner-details');
+    res.redirect('marital-details-ex-civil-partner');
   }
   else if (req.body['marital-status'] === 'widowed') {
     res.redirect('marital-details-late-spouse');
@@ -67,6 +67,12 @@ router.post('/additionalsecurity/marital-status', function(req, res) {
     res.redirect('/additionalsecurity/contact');
   }
 });
+
+
+router.post('/additionalsecurity/marital-details-divorce', (req, res) => {
+  res.redirect('/additionalsecurity/ex-spouse-details')
+})
+;
 
 router.post('/additionalsecurity/marital-details-late-spouse', (req, res) => {
   res.redirect('/additionalsecurity/late-spouse-details')
@@ -78,12 +84,37 @@ router.post('/additionalsecurity/marital-details', (req, res) => {
 })
 ;
 
+router.post('/additionalsecurity/marital-details-ex-civil-partner', (req, res) => {
+  res.redirect('/additionalsecurity/ex-civil-partner-details')
+})
+;
+
+router.post('/additionalsecurity/marital-details-civil-partner', (req, res) => {
+  res.redirect('/additionalsecurity/civil-partner-details')
+})
+;
+
 router.post('/additionalsecurity/spouse-details', (req, res) => {
   res.redirect('/additionalsecurity/contact')
 })
 ;
 
 router.post('/additionalsecurity/late-spouse-details', (req, res) => {
+  res.redirect('/additionalsecurity/contact')
+})
+;
+
+router.post('/additionalsecurity/ex-spouse-details', (req, res) => {
+  res.redirect('/additionalsecurity/contact')
+})
+;
+
+router.post('/additionalsecurity/ex-civil-partner-details', (req, res) => {
+  res.redirect('/additionalsecurity/contact')
+})
+;
+
+router.post('/additionalsecurity/civil-partner-details', (req, res) => {
   res.redirect('/additionalsecurity/contact')
 })
 ;
