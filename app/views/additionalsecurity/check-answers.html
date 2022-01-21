@@ -30,7 +30,7 @@ GOV.UK Prototype Kit
             Lived outside the UK
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['lived-outside'] === 'Yes' %}
+            {% if data['lived-abroad'] === 'yes' %}
             Yes
             {% else %}
             No
@@ -47,7 +47,7 @@ GOV.UK Prototype Kit
             Worked outside the UK
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['worked-outside'] === 'Yes' %}
+            {% if data['worked-abroad'] === 'yes' %}
             Yes
             {% else %}
             No
@@ -210,14 +210,19 @@ GOV.UK Prototype Kit
         </div>
 
 
-        {% if data.alt-formats === 'yes' %}
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Alternative format
                   </dt>
                   <dd class="govuk-summary-list__value">
                     <p class="govuk-body">
-                        {{data['alt-format-option']}}
+                      {% if data['alt-formats'] === 'yes' %}
+                      Yes<br>
+                      {{data['alt-format-option']}}
+                      {% else %}
+                      No
+                      {% endif %}
+
                     </p>
                   </dd>
                   <dd class="govuk-summary-list__actions">
@@ -226,7 +231,6 @@ GOV.UK Prototype Kit
                     </a>
                   </dd>
                 </div>
-          {% endif %}
 
 
       </dl>
