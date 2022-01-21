@@ -162,10 +162,6 @@ router.post('/additionalsecurity/contact', (req, res) => {
   })
   ;
 
-  router.post('/additionalsecurity/question-3', (req, res) => {
-    res.redirect('/additionalsecurity/check-successful')
-  })
-  ;
 
   router.post('/additionalsecurity/check-successful', (req, res) => {
     res.redirect('/additionalsecurity/check-answers')
@@ -188,6 +184,16 @@ router.post('/additionalsecurity/contact', (req, res) => {
     res.redirect('/additionalsecurity/complete')
   })
   ;
+
+  // Alt formats yes/no
+  router.post('/additionalsecurity/question-3', function(req, res) {
+    if (req.body['security-question-three'] === 'no') {
+      res.redirect('check-failed');
+    } else {
+      res.redirect('check-successful');
+    }
+  });
+
 
 
   module.exports = router;
