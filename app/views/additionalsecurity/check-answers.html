@@ -89,7 +89,7 @@ GOV.UK Prototype Kit
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">
                 {{data['spouse-name']}} {{data['spouse-surname']}}<br>
-                {{data['spouse-dob-day']}}/{{data['spouse-dob-month']}}/{{data['spouse-dob-year']}}
+                {{data['spouse-day']}}/{{data['spouse-month']}}/{{data['spouse-year']}}
             </p>
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -140,7 +140,7 @@ GOV.UK Prototype Kit
       {% endif %}
 
 
-    {% if data.marital === 'ex-civil' %}
+    {% if data.marital === 'dissolved' %}
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 About your ex civil partner
@@ -208,6 +208,27 @@ GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
+
+
+        {% if data.alt-formats === 'yes' %}
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Alternative format
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">
+                        {{data['alt-format-option']}}
+                    </p>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> </span>
+                    </a>
+                  </dd>
+                </div>
+          {% endif %}
+
+
       </dl>
 
       <button class="govuk-button" data-module="govuk-button">
