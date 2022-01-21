@@ -30,7 +30,7 @@ router.post('/additionalsecurity/alt-formats', function(req, res) {
 // Lived abroad yes/no
 router.post('/additionalsecurity/lived-abroad', function(req, res) {
   if (req.body['lived-abroad'] === 'yes') {
-    res.redirect('countries-lived');
+    res.redirect('worked-abroad');
   } else {
     res.redirect('worked-abroad');
   }
@@ -39,7 +39,7 @@ router.post('/additionalsecurity/lived-abroad', function(req, res) {
 // Worked abroad yes/no
 router.post('/additionalsecurity/worked-abroad', function(req, res) {
   if (req.body['worked-abroad'] === 'yes') {
-    res.redirect('countries-worked');
+    res.redirect('marital-status');
   } else {
     res.redirect('marital-status');
   }
