@@ -187,10 +187,10 @@ router.post('/additionalsecurity/contact', (req, res) => {
 
   // Alt formats yes/no
   router.post('/additionalsecurity/question-3', function(req, res) {
-    if (req.body['security-question-three'] === 'never') {
-      res.redirect('check-failed');
-    } else {
+    if (req.body['security-question-three'] === 'no') {
       res.redirect('check-successful');
+    } else {
+      res.redirect('check-failed');
     }
   });
 
