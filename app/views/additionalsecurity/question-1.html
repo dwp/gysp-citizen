@@ -12,38 +12,55 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-column-two-thirds">
 
         {{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.go(-1)"
-                  }) }}
+          text: "Back",
+          href: "javascript:history.go(-1)"
+                          }) }}
 
         <form method="post">
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="security-question-one-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <span class="govuk-caption-l">Question 1 of 3
-                  <br></span>
-                  <h1 class="govuk-heading-xl">Do you currently have a personal mortgage?</h1>
-                </legend>
-              <div id="security-question-one-hint" class="govuk-hint">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-l">Question 1 of 3
+                <br></span>
+                <h1 class="govuk-heading-xl">You took out a credit card or store card in July 2015 - which bank or shop was it with?</h1>
 
-              </div>
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="security-question-one" name="security-question-one" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="security-question-one">
-                    Yes
+                  <input class="govuk-radios__input" id="security-question-two" name="security-question-two" type="radio" value="less">
+                  <label class="govuk-label govuk-radios__label" for="security-question-two">
+                    Barclays
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="security-question-one-2" name="security-question-one" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="security-question-one-2">
-                    No
+                  <input class="govuk-radios__input" id="security-question-two-2" name="security-question-two" type="radio" value="1500">
+                  <label class="govuk-label govuk-radios__label" for="security-question-two-2">
+                    HSBC
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="security-question-two-3" name="security-question-two" type="radio" value="3000">
+                  <label class="govuk-label govuk-radios__label" for="security-question-two-3">
+                    John Lewis
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="security-question-two-4" name="security-question-two" type="radio" value="6000">
+                  <label class="govuk-label govuk-radios__label" for="security-question-two-4">
+                    Morrisons
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="security-question-two-5" name="security-question-two" type="radio" value="10000">
+                  <label class="govuk-label govuk-radios__label" for="security-question-two-5">
+                    Zara
                   </label>
                 </div>
               </div>
 
             </fieldset>
           </div>
+
 
       <button type="submit" class="govuk-button">
         Confirm
@@ -59,9 +76,9 @@ GOV.UK Prototype Kit
         </span>
       </summary>
       <div class="govuk-details__text">
-        <b>URL:</b> /security-question-10 <br>
-        <b>Error messages:</b> Nothing selected: Select yes if you currently have a personal mortgage<br>
-        <b>Notes:</b> This template is for all Yes/No questions <br>
+        <b>URL:</b> /security-question-13 <br>
+        <b>Error messages:</b> Nothing selected: Select which bank or shop you took out your credit or store card with<br>
+        <b>Notes:</b> This template is for all questions with a range of values <br>
       </div>
     </details>
 
@@ -72,7 +89,6 @@ GOV.UK Prototype Kit
   </div>
 
   </div>
-
 
 
 
