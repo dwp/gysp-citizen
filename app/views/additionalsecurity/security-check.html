@@ -19,14 +19,17 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <span class="govuk-heading-xl">We need to perform additional checks
-            <br></span>
+          <span class="govuk-heading-xl">We need to do some extra checks</span>
 
-            <p>We still cannot confirm your identity.</p>
+          <p class="govuk-body">We will ask you 3 multiple choice questions based on your credit record. This is to:</p>
 
-<p>We will now ask you 3 multiple choice questions based on your credit record.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>confirm your identity</li>
+            <li>protect you from fraud</li>
+            <li>make sure we pay your State Pension into the correct account</li>
+          </ul>
 
-<p>This will not affect your credit score.</p>
+<p>These checks will not affect your credit score.</p>
 
 
       <button type="submit" class="govuk-button">
@@ -38,6 +41,24 @@ GOV.UK Prototype Kit
       <br>
       <br>
       <br>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+        <b>URL, errors and notes</b>
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <b>URL:</b> /extra-checks <br>
+        <b>Error messages:</b> None needed<br>
+        <b>Notes:</b>  <br>
+      </div>
+    </details>
+
+
   </div>
   <div class="column-one-third">
     {% include 'includes/parts/help.html' %}
