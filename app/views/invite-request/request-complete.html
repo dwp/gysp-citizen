@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="your-date-of-birth">
+
+                    <div class="govuk-grid-row">
+                      <div class="govuk-grid-column-two-thirds">
+
+                        <div class="govuk-panel govuk-panel--confirmation">
+                                  <h1 class="govuk-panel__title">
+                                    Invitation code request complete
+                                  </h1>
+                                  <div class="govuk-panel__body">
+                                    Your reference number is your National Insurance number
+                                  </div>
+                        </div>
+
+                        <div class="govuk-inset-text">
+                        This is <b>NOT</b> a claim for State Pension!!!
+                        </div>
+
+                        <h2 class="govuk-heading-m">What happens next</h2>
+
+                                <p class="govuk-body">
+                                  We’ve sent your invitation letter, it will be within the next X days...
+                                </p>
+
+                                <p class="govuk-body">
+                                  Do we want to have the telephone claim number here incase the citizen decides they
+                                  can't wait for the letter?
+                                </p>
+
+                      </div>
+                    </div>
+
+</form>
+
+
+
+{% endblock %}
