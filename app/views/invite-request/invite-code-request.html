@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="your-name">
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+                    }) }}
+
+                    <div class="govuk-grid-row">
+
+                      <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl">
+                          Request an invitation letter...
+                        </h1>
+
+                        <p class="govuk-body">Criteria for requesting an invite letter</p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>Within 3.5 month of SPa</li>
+                          <li>UK address</li>
+                        </ul>
+
+                        <div class="govuk-inset-text">
+                        Invitation will be sent by post, you won't be able to make your claim online until you recieve it
+                        </div>
+
+                        <button class="govuk-button" data-module="govuk-button">
+                          Continue
+                        </button>
+
+                      </div>
+                    </div>
+
+<br>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+    <b>URL, errors and notes</b>
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <b>URL:</b>  <br>
+    <b>Error messages:</b>
+  </div>
+</details>
+
+
+
+</form>
+
+
+
+{% endblock %}

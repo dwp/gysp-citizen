@@ -8,7 +8,7 @@ router.post('/invite-request/confirm-identity', function(req, res) {
   if (req.body['confirm-identity'] === 'code') {
     res.redirect('invite-code');
   } else {
-    res.redirect('your-name');
+    res.redirect('invite-code-request');
   }
 });
 
