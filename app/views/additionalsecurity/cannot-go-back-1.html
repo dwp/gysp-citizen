@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+
+
+          <span class="govuk-heading-xl">You cannot go back
+            <br></span>
+
+            <p></p>
+
+
+<p>We still need to do some extra checks to confirm your identity.</p> 
+
+<p>These checks will not affect your credit score.</p>
+
+<p>After the checks you will be able to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>check and change your personal details</li>
+  <li>submit your claim for State Pension</li>
+</ul>
+
+      <button type="submit" class="govuk-button">
+        Continue to extra checks
+      </button>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+
+  </div>
+
+  <div class="column-one-third">
+    {% include 'includes/parts/help.html' %}
+  </div>
+
+
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
