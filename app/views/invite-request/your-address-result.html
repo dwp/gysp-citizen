@@ -19,22 +19,42 @@ GOV.UK Prototype Kit
                         <span class="govuk-caption-l">Request an invitation code
                           <br></span>
                         <h1 class="govuk-heading-xl">
-                          What is your address?
+                        Confirm your full address
                         </h1>
 
                         <div class="govuk-form-group">
-                         <label class="govuk-label" for="address-number">
-                          Property number or name
-                         </label>
-                         <input class="govuk-input govuk-!-width-two-thirds" id="address-number" name="address-number" type="text" autocomplete="address-level2">
-                       </div>
+                          <fieldset class="govuk-fieldset">
+                            <div class="govuk-radios" data-module="govuk-radios">
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                  29 New Street, Southend on Sea, SS94 3JN
+                                </label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                  19 New Street, Southend on Sea, SS94 3JN
+                                </label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                  9 New Street, Southend on Sea, SS94 3JN
+                                </label>
+                              </div>
 
-                       <div class="govuk-form-group">
-                         <label class="govuk-label" for="address-postcode">
-                           Postcode
-                         </label>
-                         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
-                       </div>
+                              <div class="govuk-radios__divider">or</div>
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                                I want to enter my address manually
+                                </label>
+                              </div>
+                            </div>
+
+                          </fieldset>
+                        </div>
 
                         <button class="govuk-button" data-module="govuk-button">
                           Continue
@@ -51,8 +71,9 @@ GOV.UK Prototype Kit
                           </span>
                         </summary>
                         <div class="govuk-details__text">
-                          <b>URL:</b> /home-address  <br>
+                          <b>URL:</b> /confirm-address  <br>
                           <b>Error messages:</b>
+                          <br>Nothing selected: Select your full address
                         </div>
                       </details>
 
