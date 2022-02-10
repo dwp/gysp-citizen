@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="your-address-manual">
+<form method="post" action="your-address">
 
   {{ govukBackLink({
     text: "Back",
@@ -24,13 +24,15 @@ GOV.UK Prototype Kit
 
                         <p>There are no results for <b>1</b> and <b>SS94 3JN</b>.</p>
 
-                        <p><a href="your-address" class="govuk-link">Search again</a></p>
+                        
 
                         <br>
 
                         <button class="govuk-button" data-module="govuk-button">
-                          Enter address manually? or continue?
+                          Search again
                         </button>
+
+                        <p><a href="your-address-manual" class="govuk-link">Enter address manually</a></p>
 
                       </div>
                     </div>
