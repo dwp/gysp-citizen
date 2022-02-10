@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="your-address-result">
+<form method="post" action="your-address-manual">
 
   {{ govukBackLink({
     text: "Back",
@@ -19,22 +19,9 @@ GOV.UK Prototype Kit
                         <span class="govuk-caption-l">Request an invitation code
                           <br></span>
                         <h1 class="govuk-heading-xl">
-                          What is your address?
+                          No result
                         </h1>
 
-                        <div class="govuk-form-group">
-                         <label class="govuk-label" for="address-number">
-                          Property number or name
-                         </label>
-                         <input class="govuk-input govuk-!-width-two-thirds" id="address-number" name="address-number" type="text" autocomplete="address-level2">
-                       </div>
-
-                       <div class="govuk-form-group">
-                         <label class="govuk-label" for="address-postcode">
-                           Postcode
-                         </label>
-                         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
-                       </div>
 
                         <button class="govuk-button" data-module="govuk-button">
                           Continue
