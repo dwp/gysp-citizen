@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="lived-abroad">
+
+  <a href="your-details" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Are you really sure?
+      </h1>
+
+<p class="govuk-body">You may miss out by doing this mind! On your head be it.</p>
+
+<p class="govuk-body">To be super sure, you might want to go geek up <a href="#" class="govuk-link">on here</a></p>
+
+<p class="govuk-body"><a href="spa" class="govuk-link">Go back and put in a more sensible date</a></p>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include 'includes/parts/help.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+  {% endblock %}
