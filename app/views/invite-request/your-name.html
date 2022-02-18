@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="date-of-birth">
+<form method="post">
 
                     <div class="govuk-grid-row">
 
@@ -18,16 +18,16 @@ GOV.UK Prototype Kit
                         </h1>
 
                         <div class="govuk-form-group">
-                          <label class="govuk-label" for="full-name">
+                          <label class="govuk-label" for="first-name">
                             First name
                           </label>
-                          <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                          <input class="govuk-input" id="first-name" name="first-name" type="text" spellcheck="false"></div>
 
                           <div class="govuk-form-group">
-                            <label class="govuk-label" for="full-name">
+                            <label class="govuk-label" for="last-name">
                             Last name
                             </label>
-                            <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                            <input class="govuk-input" id="last-name" name="last-name" type="text" spellcheck="false"></div>
 
                         <button class="govuk-button" data-module="govuk-button">
                           Continue
@@ -60,7 +60,7 @@ GOV.UK Prototype Kit
                         <br>
                         <br>
                         <br>
-                  
+
                       </div>
                       <div class="column-one-third">
                         {% include 'includes/parts/helpstart.html' %}
@@ -76,7 +76,7 @@ GOV.UK Prototype Kit
                         </summary>
                         <div class="govuk-details__text">
                           <b>URL:</b> /your-name<br>
-                          <b>Error messages:</b> 
+                          <b>Error messages:</b>
                           <br>Empty: Enter your first name
                           <br>Invalid: First name must start with a letter and only include letters, hyphens, apostrophes, full stops, spaces and ampersands
                           <br>Length: First name must be 70 characters or less

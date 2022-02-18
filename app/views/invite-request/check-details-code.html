@@ -28,10 +28,10 @@ GOV.UK Prototype Kit
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            John Spencer
+          {{data['first-name']}} {{data['last-name']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
+            <a class="govuk-link" href="your-name">
               Change<span class="govuk-visually-hidden"> name</span>
             </a>
           </dd>
@@ -42,10 +42,10 @@ GOV.UK Prototype Kit
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            12 February 1954
+            {{data['day']}}/{{data['month']}}/{{data['year']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
+            <a class="govuk-link" href="date-of-birth">
               Change<span class="govuk-visually-hidden"> date of birth</span>
             </a>
           </dd>
@@ -65,7 +65,7 @@ GOV.UK Prototype Kit
             <br>SS94 3JN
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
+            <a class="govuk-link" href="home-address">
               Change<span class="govuk-visually-hidden"> contact information</span>
             </a>
           </dd>
@@ -104,7 +104,7 @@ GOV.UK Prototype Kit
                         <br>
                         <br>
                         <br>
-                  
+
                       </div>
                       <div class="column-one-third">
                         {% include 'includes/parts/helpstart.html' %}
@@ -128,7 +128,7 @@ GOV.UK Prototype Kit
 
 
 
-    
+
 
   </div>
 
