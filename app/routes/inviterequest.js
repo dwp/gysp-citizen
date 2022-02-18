@@ -38,10 +38,17 @@ router.post('/invite-request/date-of-birth', function(req, res) {
 
 
 //
-router.post('/invite-request/home-address', (req, res) => {
-  res.redirect('/invite-request/confirm-full-address')
-})
-;
+router.post('/invite-request/home-address', function(req, res) {
+  if (req.body['address-search-postcode'] === 'NL12 8JK') {
+    res.redirect('no-addresses-found');
+    }
+    else if (req.body['address-search-postcode'] === 'nl12 8jk') {
+      res.redirect('no-addresses-found');
+    }
+    else {
+      res.redirect('confirm-full-address');
+    }
+  });
 
 
 router.post('/invite-request/confirm-full-address', function(req, res) {
