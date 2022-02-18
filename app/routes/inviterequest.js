@@ -59,5 +59,25 @@ router.post('/invite-request/confirm-full-address', function(req, res) {
   }
 });
 
+// manual address to CYA
+router.post('/invite-request/what-is-your-address', (req, res) => {
+  res.redirect('/invite-request/check-details-code')
+})
+;
+
+
+router.post('/invite-request/check-details-code', function(req, res) {
+  if (req.session.data["address-search-postcode"] === "NL12 8JK") {
+    res.redirect('need-to-call-us');
+  }
+  else if (req.session.data['address-search-postcode'] === 'nl12 8jk') {
+    res.redirect('need-to-call-us');
+  }
+  else {
+    res.redirect('code-requested');
+  }
+});
+
+
 
   module.exports = router;
