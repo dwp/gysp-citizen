@@ -36,4 +36,21 @@ router.post('/invite-request/date-of-birth', function(req, res) {
   }
 });
 
+
+//
+router.post('/invite-request/home-address', (req, res) => {
+  res.redirect('/invite-request/confirm-full-address')
+})
+;
+
+
+router.post('/invite-request/confirm-full-address', function(req, res) {
+  if (req.body['where-do-you-live'] === 'manual') {
+    res.redirect('what-is-your-address');
+  } else {
+    res.redirect('check-details-code');
+  }
+});
+
+
   module.exports = router;
