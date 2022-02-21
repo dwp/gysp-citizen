@@ -50,6 +50,12 @@ router.post('/invite-request/home-address', function(req, res) {
     }
   });
 
+  //
+  router.post('/invite-request/no-addresses-found', (req, res) => {
+    res.redirect('/invite-request/home-address')
+  })
+  ;
+
 
 router.post('/invite-request/confirm-full-address', function(req, res) {
   if (req.body['where-do-you-live'] === 'manual') {
