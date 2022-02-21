@@ -45,6 +45,12 @@ router.post('/invite-request/home-address', function(req, res) {
     else if (req.body['address-search-postcode'] === 'nl12 8jk') {
       res.redirect('no-addresses-found');
     }
+    else if (req.body['address-search-postcode'] === 'nl128jk') {
+      res.redirect('no-addresses-found');
+    }
+    else if (req.body['address-search-postcode'] === 'NL12 8JK') {
+      res.redirect('no-addresses-found');
+    }
     else {
       res.redirect('confirm-full-address');
     }
