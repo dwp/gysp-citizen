@@ -29,7 +29,7 @@ router.post('/invite-request/your-name', (req, res) => {
 
 
 router.post('/invite-request/date-of-birth', function(req, res) {
-  if (req.session.data["year"] === "1957") {
+  if (req.session.data["year"] === "1955") {
     res.redirect('cannot-request-code');
   } else {
     res.redirect('home-address');
@@ -37,24 +37,31 @@ router.post('/invite-request/date-of-birth', function(req, res) {
 });
 
 
-//
-router.post('/invite-request/home-address', function(req, res) {
-  if (req.body['address-search-postcode'] === 'NL12 8JK') {
-    res.redirect('no-addresses-found');
-    }
-    else if (req.body['address-search-postcode'] === 'nl12 8jk') {
-      res.redirect('no-addresses-found');
-    }
-    else if (req.body['address-search-postcode'] === 'nl128jk') {
-      res.redirect('no-addresses-found');
-    }
-    else if (req.body['address-search-postcode'] === 'NL12 8JK') {
-      res.redirect('no-addresses-found');
-    }
-    else {
-      res.redirect('confirm-full-address');
-    }
-  });
+router.post('/invite-request/home-address', (req, res) => {
+  res.redirect('/invite-request/no-addresses-found')
+})
+;
+
+
+
+
+// router.post('/invite-request/home-address', function(req, res) {
+//  if (req.body['address-search-postcode'] === 'NL12 8JK') {
+//    res.redirect('no-addresses-found');
+//    }
+//    else if (req.body['address-search-postcode'] === 'nl12 8jk') {
+//      res.redirect('no-addresses-found');
+//    }
+//    else if (req.body['address-search-postcode'] === 'nl128jk') {
+//      res.redirect('no-addresses-found');
+//    }
+//    else if (req.body['address-search-postcode'] === 'NL12 8JK') {
+//      res.redirect('no-addresses-found');
+//    }
+//    else {
+//      res.redirect('confirm-full-address');
+//    }
+//});
 
   //
   router.post('/invite-request/no-addresses-found', (req, res) => {
