@@ -93,7 +93,7 @@ router.post('/invite-request/check-details-code', function(req, res) {
     res.redirect('need-to-call-us');
   }
   else {
-    res.redirect('code-requested');
+    res.redirect('need-to-call-us');
   }
 });
 
