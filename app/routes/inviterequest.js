@@ -29,9 +29,13 @@ router.post('/invite-request/your-name', (req, res) => {
 
 
 router.post('/invite-request/date-of-birth', function(req, res) {
-  if (req.session.data["year"] === "1955") {
+  if (req.session.data["month"] === "07") {
     res.redirect('cannot-request-code');
-  } else {
+  }
+  else if (req.session.data["month"] === "7") {
+    res.redirect('need-to-call-us');
+  }
+  else {
     res.redirect('home-address');
   }
 });
