@@ -6,9 +6,9 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="prison">
+<form method="post" action="first-payment">
 
-  <a href="your-details" class="govuk-back-link">Back</a>
+  <a href="post-spa" class="govuk-back-link">Back</a>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -16,11 +16,47 @@ GOV.UK Prototype Kit
       <h1 class="govuk-heading-xl">
         Your State Pension date
       </h1>
+<div class="govuk-inset-text">The earliest date you can get your state pension from is <b>12 April 2021</b>.</div>
+<br>
+<br>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+  <h2 class="govuk-fieldset__heading">
+What date do you want to get your State Pension from?  </h2>
+</legend>
+<div id="passport-issued-hint" class="govuk-hint">
+  For example, 27 3 2007
+</div>
+<div class="govuk-date-input" id="passport-issued">
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+        Day
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+    </div>
+  </div>
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+        Month
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+    </div>
+  </div>
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+        Year
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+    </div>
+  </div>
+</div>
 
-        <p>You reached State Pension age on <b>12 April 2021</b>.</p>
-
-        <p>We will start your State Pension from this date, unless
-          you <br><a href="date-want-sp">tell us a later date.</a></p>
+</fieldset>
+</div>
 
       <button class="govuk-button" data-module="govuk-button">
         Continue
