@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post('/invite-request/invitation-code', function(req, res) {
   if (req.body['confirm-identity'] === 'code') {
-    res.redirect('invite-code');
+    res.redirect('your-details');
   } else {
     res.redirect('request-invitation-code');
   }
