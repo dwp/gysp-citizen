@@ -1,0 +1,55 @@
++{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="your-date-of-birth">
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <span class="govuk-caption-l">
+    <br></span>
+<h1 class="govuk-heading-xl">You will need to start again</h1>
+
+  <p class="govuk-body">Your session expired because:</p>
+
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>you had not done anything for 30 minutes</li>
+    <li>you clicked on the Get your State Pension link in the top banner</li>
+    <li>you tried to click back too many times</li>
+  </ul>
+
+  <p class="govuk-body">Any information you entered was cleared for security purposes.</p>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Start again
+  </button>
+
+
+</div>
+</div>
+
+<br>
+
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+<b>URL, errors and notes</b>
+</span>
+</summary>
+<div class="govuk-details__text">
+<b>URL:</b> /need-to-start-again <br>
+<b>Error messages:</b>
+</div>
+</details>
+
+
+</form>
+
+
+
+{% endblock %}
