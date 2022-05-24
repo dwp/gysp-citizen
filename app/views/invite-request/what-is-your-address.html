@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+
+                    <div class="govuk-grid-row">
+
+                      <div class="govuk-grid-column-two-thirds">
+                        <span class="govuk-caption-l">Request an invitation code
+                          <br></span>
+                        <h1 class="govuk-heading-xl">
+                          What is your address?
+                        </h1>
+
+                        <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Property number or name <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">Street name
+          <span class="govuk-visually-hidden">Street name</span>
+        </label>
+        <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+      </div>
+
+
+                        <button class="govuk-button" data-module="govuk-button">
+                          Continue
+                        </button>
+
+                        <br><a href="home-address" class="govuk-link">Search for address again</a>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                      </div>
+                      <div class="column-one-third">
+                        {% include 'includes/parts/helpstart.html' %}
+                      </div>
+                    </div>
+
+                    <br>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                          <b>URL, errors and notes</b>
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <b>URL:</b> /what-is-your-address  <br>
+                          <b>Error messages:</b>
+                          <br>Empty: Enter a property name or number
+                          <br>Invalid: Property name must be 35 characters or less
+                          <br>Empty: Enter a street name
+                          <br>Invalid: Enter a street name in the correct format
+                          <br>Length: Street name must be 35 characters or less
+                          <br>Empty: Enter a town or city
+                          <br>Invalid: Enter a town or city in the correct format
+                          <br>Length: Town or city must be 35 characters or less
+                          <br>Empty: Enter a postcode
+                          <br>Invalid: Enter a postcode in the correct format, like AA1 1AA
+
+                        </div>
+                      </details>
+
+
+</form>
+
+
+
+{% endblock %}

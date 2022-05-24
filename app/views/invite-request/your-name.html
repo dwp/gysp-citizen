@@ -6,38 +6,87 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="your-date-of-birth">
-
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:history.go(-1)"
-                    }) }}
+<form method="post">
 
                     <div class="govuk-grid-row">
 
                       <div class="govuk-grid-column-two-thirds">
+                        <span class="govuk-caption-l">Request an invitation code
+                          <br></span>
                         <h1 class="govuk-heading-xl">
                           What is your name?
                         </h1>
 
                         <div class="govuk-form-group">
-                          <label class="govuk-label" for="full-name">
+                          <label class="govuk-label" for="first-name">
                             First name
                           </label>
-                          <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                          <input class="govuk-input" id="first-name" name="first-name" type="text" spellcheck="false"></div>
 
                           <div class="govuk-form-group">
-                            <label class="govuk-label" for="full-name">
+                            <label class="govuk-label" for="last-name">
                             Last name
                             </label>
-                            <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                            <input class="govuk-input" id="last-name" name="last-name" type="text" spellcheck="false"></div>
 
                         <button class="govuk-button" data-module="govuk-button">
                           Continue
                         </button>
 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                      </div>
+                      <div class="column-one-third">
+                        {% include 'includes/parts/helpstart.html' %}
                       </div>
                     </div>
+
+                    <br>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                          <b>URL, errors and notes</b>
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <b>URL:</b> /your-name<br>
+                          <b>Error messages:</b>
+                          <br>Empty: Enter your first name
+                          <br>Invalid: First name must start with a letter and only include letters a to z, hyphens, apostrophes, full stops and spaces
+                          <br>Length: First name must be 70 characters or less
+                          <br>Empty: Enter your last name
+                          <br>Invalid: Last name must start with a letter and only include letters a to z, hyphens, apostrophes, full stops and spaces
+                          <br>Length: Last name must be 70 characters or less
+
+                        </div>
+                      </details>
+
 
 </form>
 
