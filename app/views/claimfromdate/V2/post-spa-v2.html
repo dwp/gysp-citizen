@@ -1,3 +1,4 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -14,20 +15,24 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Your State Pension date
-      </h1>
-<div class="govuk-inset-text">The earliest date you can get your state pension from is <b>12 April 2022</b>.</div>
-<br>
-<br>
+What date do you want to start your State Pension?      </h1>
+      <p>You reached State Pension age on <b>11 April 2021</b> and may be owed some State Pension.</p><p>Enter a start date:</p>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>of <b>11 April 2021</b> to get all of the State Pension you are owed as a one-off arrears payment
+         <li>after <b>14 June 2021</b> to increase your State Pension payments for the rest of your life - the later your start date, the bigger your increase will be</li>
+<li>before <b>20 June 2022</b> to get a one-off arrears payment - the earlier your start date, the bigger your one-off payment will be</li>
+</ul>
+
+
+
+
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
   <h2 class="govuk-fieldset__heading">
-What date do you want to get your State Pension from?  </h2>
+</h2>
 </legend>
-<div id="passport-issued-hint" class="govuk-hint">
-  For example, 27 3 2007
-</div>
+
 <div class="govuk-date-input" id="passport-issued">
   <div class="govuk-date-input__item">
     <div class="govuk-form-group">
