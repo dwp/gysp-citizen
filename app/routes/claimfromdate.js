@@ -49,11 +49,6 @@ router.post('/additionalsecurity/marital-status', function(req, res) {
 });
 
 
-router.post('/additionalsecurity/marital-details-divorce', (req, res) => {
-  res.redirect('/additionalsecurity/ex-spouse-details')
-})
-;
-
 
 
   // Alt formats yes/no
