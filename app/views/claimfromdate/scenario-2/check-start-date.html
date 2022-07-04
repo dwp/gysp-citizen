@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="prison">
+<form method="post">
 
   <a href="spa" class="govuk-back-link">Back</a>
 
@@ -28,7 +28,7 @@ Check your start date</h1>
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="chosen" aria-describedby="sign-in-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in">
 Yes        </label>
       </div>
@@ -37,7 +37,7 @@ Yes        </label>
 
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="different" aria-describedby="sign-in-2-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in-2">
 No, choose a different date        </label>
     </div>
@@ -73,6 +73,12 @@ No, choose a different date        </label>
 
   </div>
 
+<script>
+    nextPageRoutes = {
+        'chosen': 'lived-abroad',
+        'different': 'date-want-sp',
+        }
+</script>
 
 
 </form>

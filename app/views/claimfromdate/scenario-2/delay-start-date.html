@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="date-want-sp">
+
 
   <a href="your-details" class="govuk-back-link">Back</a>
 
@@ -20,6 +20,9 @@ Delaying your start date</h1>
 <p> <a href="https://www.gov.uk/deferring-state-pension">Find out more about delaying your State Pension (opens in a new tab)</a>.</p>
     <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
 <p>
+
+<form method="post">
+
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -29,7 +32,7 @@ Delaying your start date</h1>
 
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="yes" aria-describedby="sign-in-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in">
 Yes, delay and choose a later start date   </label>
 
@@ -39,7 +42,7 @@ Yes, delay and choose a later start date   </label>
 
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="no" aria-describedby="sign-in-2-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in-2">
 No, start on 12 April 2022 </label>
 <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">This is the earliest date you can start your State Pension.</div>
@@ -52,6 +55,8 @@ No, start on 12 April 2022 </label>
         Continue
       </button>
 
+</form>
+
       <br><br><br><br><br><br><br><br>
 
     </div>
@@ -62,9 +67,15 @@ No, start on 12 April 2022 </label>
 
   </div>
 
+<script>
+    nextPageRoutes = {
+        'yes': 'date-want-sp',
+        'no': 'lived-abroad',
+        }
+</script>
 
 
-</form>
+
 
 
   {% endblock %}
