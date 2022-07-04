@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="widow-details">
+
+  <a href="marital-status" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+      What date was your civil partnership or marriage?
+      </h1>
+
+
+      <div id="date-of-marriage-hint" class="govuk-hint">
+           For example, 27 3 2007
+         </div>
+         <div class="govuk-date-input" id="date-of-marriage">
+           <div class="govuk-date-input__item">
+             <div class="govuk-form-group">
+               <label class="govuk-label govuk-date-input__label" for="date-of-marriage-day">
+                 Day
+               </label>
+               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-marriage-day" name="date-of-marriage-day" type="text" inputmode="numeric">
+             </div>
+           </div>
+           <div class="govuk-date-input__item">
+             <div class="govuk-form-group">
+               <label class="govuk-label govuk-date-input__label" for="date-of-marriage-month">
+                 Month
+               </label>
+               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-marriage-month" name="date-of-marriage-month" type="text" inputmode="numeric">
+             </div>
+           </div>
+           <div class="govuk-date-input__item">
+             <div class="govuk-form-group">
+               <label class="govuk-label govuk-date-input__label" for="date-of-marriage-year">
+                 Year
+               </label>
+               <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-marriage-year" name="date-of-marriage-year" type="text" inputmode="numeric">
+             </div>
+           </div>
+         </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+
+
+<br><br><br><br>
+
+
+    </div>
+
+
+    <div class="column-one-third">
+      {% include 'includes/parts/help.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+  {% endblock %}
