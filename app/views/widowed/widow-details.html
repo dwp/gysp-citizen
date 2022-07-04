@@ -14,7 +14,7 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        About your spouse
+        About your husband, wife or civil partner
       </h1>
 
       <div class="govuk-form-group">
@@ -42,6 +42,33 @@ GOV.UK Prototype Kit
       </div>
 
     <p>  <a href="#" class="govuk-link govuk-link--no-visited-state">Add name</a></p>
+    <div class="govuk-date-input" id="date-of-birth">
+      <h3 class="govuk-heading-s">Their date of birth</h3>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
 
 
     <div class="govuk-date-input" id="date-of-death">
@@ -74,7 +101,8 @@ GOV.UK Prototype Kit
 
 
     <div class="govuk-date-input" id="date-of-birth">
-      <h3 class="govuk-heading-s">Their date of birth</h3>
+      <h3 class="govuk-heading-s">When did you get married or form a civil partnership? (optional)
+</h3>
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
@@ -100,6 +128,7 @@ GOV.UK Prototype Kit
         </div>
       </div>
     </div>
+
 
       <button class="govuk-button" data-module="govuk-button">
         Continue
