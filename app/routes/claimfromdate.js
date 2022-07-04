@@ -31,6 +31,18 @@ router.post('/claimfromdate/scenario-1/date-want-sp', function(req, res) {
   }
 });
 
+router.post('/claimfromdate/scenario-3/post-spa', function(req, res) {
+  if (req.body['passport-issued-month'] === '11') {
+    res.redirect('do-not-claim-yet');
+  }
+  else if (req.session.data["passport-issued-month"] === "10") {
+    res.redirect('prison');
+  } 
+  else if (req.session.data["passport-issued-month"] === "9") {
+    res.redirect('check-start-date');
+  }
+});
+
 
 // Scenario two
 
