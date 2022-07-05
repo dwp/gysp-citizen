@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="prison">
+
 
   {{ govukBackLink ({
   text: 'Back',
@@ -27,8 +27,10 @@ Check your start date</h1>
 Confirm when you want us to calculate your State Pension from      </h2>
     </legend>
 
+    <form method="post">
+
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="chosen" aria-describedby="sign-in-2-item-hint">
             <label class="govuk-label govuk-radios__label" for="sign-in-2">
               5 July 2021
             </label>
@@ -36,7 +38,7 @@ Confirm when you want us to calculate your State Pension from      </h2>
 You will not get any State Pension for the period 15 May 2021 to 4 July 2021.</div>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="different" aria-describedby="sign-in-2-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in-2">
 A different date        </label>
         <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
@@ -49,16 +51,21 @@ Choosing 16 July 2021 or later could <a href="https://www.gov.uk/deferring-state
   </button>
   
   </div>
-
+</form>
 
     <div class="column-one-third">
       {% include 'includes/parts/help.html' %}
     </div>  </div>
 
+<script>
+    nextPageRoutes = {
+        'chosen': 'prison',
+        'different': 'post-spa',
+        }
+</script>
 
 
 
-</form>
 
 
   {% endblock %}
