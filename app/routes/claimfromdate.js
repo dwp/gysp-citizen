@@ -5,6 +5,11 @@ const router = express.Router()
 
 // Scenario one
 
+router.post('/claimfromdate/scenario-1/confirm-identity', (req, res) => {
+  res.redirect('/claimfromdate/scenario-1/your-details')
+})
+;
+
 router.post('/claimfromdate/scenario-1/your-details', (req, res) => {
   res.redirect('/claimfromdate/scenario-1/post-spa')
 })
@@ -38,7 +43,10 @@ router.post('/claimfromdate/scenario-1/declaration', (req, res) => {
 
 // Scenario two
 
-
+router.post('/claimfromdate/scenario-2/confirm-identity', (req, res) => {
+  res.redirect('/claimfromdate/scenario-2/your-details')
+})
+;
 
 router.post('/claimfromdate/scenario-2/your-details', (req, res) => {
   res.redirect('/claimfromdate/scenario-2/post-spa')
@@ -74,7 +82,10 @@ router.post('/claimfromdate/scenario-2/declaration', (req, res) => {
 
 // Scenario three
 
-
+router.post('/claimfromdate/scenario-3/confirm-identity', (req, res) => {
+  res.redirect('/claimfromdate/scenario-3/your-details')
+})
+;
 
 router.post('/claimfromdate/scenario-3/your-details', (req, res) => {
   res.redirect('/claimfromdate/scenario-3/post-spa')

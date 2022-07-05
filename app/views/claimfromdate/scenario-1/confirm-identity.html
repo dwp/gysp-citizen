@@ -6,9 +6,12 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="your-details">
 
-  <a href="start" class="govuk-back-link">Back</a>
+
+  {{ govukBackLink ({
+  text: 'Back',
+  href: 'javascript:history.back()'
+}) }}
 
   <div class="govuk-grid-row">
 
@@ -20,6 +23,7 @@ GOV.UK Prototype Kit
 
       <!--  <p class="govuk-hint">You can find this on your Get your State Pension letter<br>
         </p><br> -->
+<form method="post">
 
         <div class="govuk-radios">
           <div class="govuk-radios__item">
