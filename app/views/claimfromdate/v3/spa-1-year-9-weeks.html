@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="date-want-sp">
+
+  <a href="your-details" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Your State Pension date
+</h1>
+
+<p>You reached State Pension age on 5 May 2021 and may be owed some payments.</p>
+ <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+    How do you want to get any State Pension you are owed?</h2>
+    </legend>
+
+
+
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+One-off arears payment</label>
+<div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">Up to 12 months of State Pension we owe you will be backdated and we'll pay it along with your first payment. You will not get any State Pension for the period 5 May 2021 to 11 July 2022.</div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+Increase to my regular payments</label>
+<div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">Your State Pension could increase by just over 0.1% for every week that you have delayed since 5 May 2021. It takes over 17 years to get back the money you use to increase your payments.</div>
+      </div>
+
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in">
+A mix of both  </label>
+    <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+You can split what you are owed between a one-off payment and an increase to your regular payments.
+
+  </div>
+  </div>
+
+
+  </fieldset></div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+      <br><br><br><br><br><br><br><br>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include 'includes/parts/help.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+  {% endblock %}
