@@ -6,35 +6,47 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="spa">
+<form method="post" action="contact">
 
-  <a href="confirm-identity" class="govuk-back-link">Back</a>
+ {{ govukBackLink ({
+   text: 'Back',
+   href: 'javascript:history.back()'
+ }) }}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-xl">
-        Your details
-      </h1>
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label">
-            <b>What is your invitation code?</b>
-            <p class="govuk-hint">You can find this on your Get your State Pension letter.<br>
-              <a class="govuk-body govuk-!-font-size-19" href="https://get-state-pension.service.gov.uk/verify">I
-                haven't
-                got my letter with me</a></p>
-          </label>
-        </h1>
-        <input class="govuk-input govuk-input--width-20" type="text">
-      </div>
+   <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <form method="post">
 
 
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Confirm your address
+                </h1>
+              </legend>
+          </div>
 
-      <h2 class="govuk-heading-s">
+
+         <h2 class="govuk-heading-m">
+          Which address should we use?
+          </h2>
+              
+          <p class="govuk-body">
+          Flat 1<br>
+          4 Mill Lane<br> 
+          Arleston<br> 
+          TF1 2HN</p>
+
+<br>
+
+      <h2 class="govuk-heading-m">
         Are you living at the address we sent your invitation letter to?
       </h2>
+      
+
       <div class="govuk-radios govuk-radios--inline">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="address" name="address" type="radio" value="yes">
@@ -58,10 +70,11 @@ GOV.UK Prototype Kit
 
 
       <br>
+
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
-
+<br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
     <div class="column-one-third">
@@ -70,7 +83,9 @@ GOV.UK Prototype Kit
 
   </div>
 
+ 
+
 </form>
 
 
-{% endblock %}
+  {% endblock %}
