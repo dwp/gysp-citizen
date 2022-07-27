@@ -18,6 +18,7 @@ const bankaccount2 = require('./routes/bankaccount2');
 const additionalsecurity = require('./routes/additionalsecurity');
 const inviterequest = require('./routes/inviterequest');
 const claimfromdate = require('./routes/claimfromdate');
+const welsh = require('./routes/welsh');
 
 //copy the router use and update the sprint version
 router.use(altformats);
@@ -26,10 +27,8 @@ router.use(bankaccount2);
 router.use(additionalsecurity);
 router.use(inviterequest);
 router.use(claimfromdate);
+router.use(welsh);
 
 
 
 module.exports = router;
-
-
-
