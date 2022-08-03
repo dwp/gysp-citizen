@@ -6,9 +6,12 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="prison">
+<form method="post" action="lived-abroad">
 
-  <a href="your-details" class="govuk-back-link">Back</a>
+  {{ govukBackLink({
+            text: "Back",
+            href: "javascript:history.go(-1)"
+                            }) }}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
