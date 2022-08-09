@@ -16,10 +16,12 @@ GOV.UK Prototype Kit
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label">
-            <p class="govuk-heading-xl">Have you ever lived or worked outside the UK?</p>
-            <p class="govuk-hint">You do not need to provide any details if you have served overseas with the British armed forces.<br>
+            <p class="govuk-heading-xl">Have you lived outside the UK since the age of 16?</p>
+            <p class="govuk-hint">This does not include time spent serving overseas with the British armed forces.<br>
             </p>
           </label>
+
+          
         </h1>
         <div class="govuk-radios govuk-radios--inline">
           <div class="govuk-radios__item">
@@ -35,6 +37,28 @@ GOV.UK Prototype Kit
             </label>
           </div>
         </div>      </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What information do we need?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">Tell us about:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>dates living outside the UK since the age of 16</li>
+                <li>any multiple periods spent living in one country</li>
+              </ul>
+
+              <p class="govuk-body">Do not tell us about:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>time spent serving overseas with the British armed forces</li>
+                <li>holidays in non-UK countries</li>
+              </ul>
+          </div>
+        </details>
+        
 
       <button class="govuk-button" data-module="govuk-button">
         Continue
