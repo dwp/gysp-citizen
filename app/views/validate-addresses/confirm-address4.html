@@ -6,12 +6,14 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="contact">
+<form method="post">
 
  {{ govukBackLink ({
    text: 'Back',
    href: 'javascript:history.back()'
  }) }}
+
+
 
    <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -81,7 +83,7 @@ GOV.UK Prototype Kit
 <script>
     nextPageRoutes = {
         'yes': 'spa',
-        'no': '/current/tasks/fix-account-details/tasks-fix-account-details.html',
+        'no': 'call-us',
         }
 </script>
 
