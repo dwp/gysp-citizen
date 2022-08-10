@@ -1,0 +1,71 @@
++{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="your-date-of-birth">
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <span class="govuk-caption-l">
+    <br></span>
+<h1 class="govuk-heading-xl">We cannot send you a 
+  code in the post</h1>
+
+  <p class="govuk-body">This is because we cannot verify some of the details you entered.</p>
+
+<!-- <p class="govuk-body">Call us to make a telephone claim for State Pension.</p> -->
+
+<h1 class="govuk-heading-m">What you need to do next</h1>
+
+<p class="govuk-body">You will have to call us to make a telephone claim for State Pension.</p>
+
+
+<h1 class="govuk-heading-s">State Pension new claims</h1>
+
+  <p class="govuk-body-m"><strong> Telephone: 0808 100 2658
+  <br> Textphone: 0808 100 2198</strong></p>
+<p class="govuk-body-m">Monday to Friday, 9am to 4pm (closed on public holidays)</p>
+
+  <h2 class="govuk-heading-m">If you cannot speak or hear on the phone</h2>
+
+  <p>British Sign Language users can <a href="https://portal.starleaf.com/webrtc?name=DWP&target=DWP@interpreterslive.call.sl" class="govuk-link" rel="noreferrer noopener" target="_blank">contact DfC using the video relay service (opens in a new tab)</a>.</p>
+
+  <p>Irish Sign Language users can <a href="https://portal.starleaf.com/webrtc?name=DfCNIDWP&target=DfCNIDWP%40interpreterslive.call.sl" class="govuk-link" rel="noreferrer noopener" target="_blank">contact DfC using the video relay service (opens in a new tab)</a>.</p>
+
+  <p><a href="https://www.dalanguages.co.uk/dwp-bsl/" class="govuk-link" rel="noreferrer noopener" target="_blank">Check how to use the video relay service in BSL (opens in a new tab)</a>.
+
+  <p><a href="https://www.youtube.com/watch?v=9XnB8pMZZ6k" class="govuk-link" rel="noreferrer noopener" target="_blank">Check how to use the video relay service in ISL (opens in a new tab)</a>.
+
+<p class="govuk-body-m">Monday to Friday, 9am to 4pm (closed on public holidays)
+
+</div>
+</div>
+
+<br>
+
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+<b>URL, errors and notes</b>
+</span>
+</summary>
+<div class="govuk-details__text">
+<b>URL:</b> /cannot-send-code <br>
+<a href="/invite-request/code-requested" class="govuk-link">Code requested screen</a><br>
+
+<a href="/invite-request/start" class="govuk-link">Start again</a><br>
+
+<b>Error messages:</b>
+</div>
+</details>
+
+
+</form>
+
+
+
+{% endblock %}

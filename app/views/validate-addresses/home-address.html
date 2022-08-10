@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="confirm-full-address">
+
+
+                    <div class="govuk-grid-row">
+
+                      <div class="govuk-grid-column-two-thirds">
+                        
+{{ govukBackLink ({
+  text: 'Back',
+  href: 'javascript:history.back()'
+}) }}
+
+<br><br><br>
+
+                        <h1 class="govuk-heading-xl">
+                          What is your address?
+                        </h1>
+
+                        <div class="govuk-form-group">
+                         <label class="govuk-label" for="address-search-number">
+                          Property number or name
+                         </label>
+                         <input class="govuk-input govuk-!-width-two-thirds" id="address-number" name="address-search-number" type="text">
+                       </div>
+
+                       <div class="govuk-form-group">
+                         <label class="govuk-label" for="address-search-postcode">
+                           Postcode
+                         </label>
+                         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-search-postcode" type="text">
+                       </div>
+
+                        <button class="govuk-button" data-module="govuk-button">
+                          Continue
+                        </button>
+
+                        <br>
+                        <br>
+                        <br>
+                        
+
+                      </div>
+                      <div class="column-one-third">
+                        {% include 'includes/parts/help-updated.html' %}
+                      </div>
+                    </div>
+
+                    
+
+
+</form>
+
+
+
+{% endblock %}

@@ -8,7 +8,12 @@ GOV.UK Prototype Kit
 
 <form method="post" action="lived-abroad">
 
-  <a href="your-details" class="govuk-back-link">Back</a>
+  {{ govukBackLink ({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+
+<br><br><br>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -22,6 +27,8 @@ GOV.UK Prototype Kit
         <p>You will get your State Pension from this date unless
           you <br><a href="#">want to delay your start date.</a></p>
 
+<br>
+
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
@@ -32,7 +39,7 @@ GOV.UK Prototype Kit
     
 
     <div class="column-one-third">
-      {% include 'includes/parts/help.html' %}
+      {% include 'includes/parts/help-updated.html' %}
     </div>
 
   </div>
