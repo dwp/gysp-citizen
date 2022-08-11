@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+
+ {{ govukBackLink ({
+   text: 'Back',
+   href: 'javascript:history.back()'
+ }) }}
+
+
+
+   <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Is the address we have for you correct?
+                </h1>
+
+              </legend>
+
+
+
+<div class="govuk-inset-text">
+      <p>1/59 Langley Park Road<br>
+         Sutton<br>
+         Surrey<br>
+         SM2 5HA</p></div>
+<br>
+       <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="address" name="address" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="address">
+            Yes
+          </label>
+        </div>
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="address-2" name="address" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="address-2">
+            No
+          </label>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+      <br>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+<br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <div class="column-one-third">
+      {% include 'includes/parts/help-updated.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+<script>
+    nextPageRoutes = {
+        'yes': 'spa',
+        'no': 'call-us',
+        }
+</script>
+
+
+  {% endblock %}
