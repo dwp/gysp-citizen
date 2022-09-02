@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="your-details">
+<form method="post">
 
   {{ govukBackLink({
             text: "Back",
@@ -22,18 +22,18 @@ GOV.UK Prototype Kit
 
       <div class="govuk-radios">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio"
-            value="england">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          <input class="govuk-radios__input" id="invite-code" name="invite-code" type="radio"
+            value="yes">
+          <label class="govuk-label govuk-radios__label" for="invite-code">
             <b>I have an invitation letter</b><br>
             If you’ve been sent a letter, your unique invitation code will be included in this letter.
           </label>
         </div>
         <br>
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio"
-            value="scotland">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          <input class="govuk-radios__input" id="invite-code-2" name="invite-code" type="radio"
+            value="no">
+          <label class="govuk-label govuk-radios__label" for="invite-code-2">
             <b>I haven’t got an invitation letter</b> <br>You can prove your identity with GOV.UK Verify instead.
           </label>
         </div>
