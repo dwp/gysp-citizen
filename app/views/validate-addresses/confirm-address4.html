@@ -6,12 +6,14 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="contact">
+<form method="post">
 
  {{ govukBackLink ({
    text: 'Back',
    href: 'javascript:history.back()'
  }) }}
+
+
 
    <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -43,16 +45,11 @@ GOV.UK Prototype Kit
             Yes
           </label>
         </div>
-         <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="address" name="address" type="radio" value="yes">
-           <label class="govuk-label govuk-radios__label" for="address">
-             No, the format or spelling is wrong
-           </label>
-         </div>
+        
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="address-2" name="address" type="radio" value="no">
           <label class="govuk-label govuk-radios__label" for="address-2">
-            No, the address is wrong
+            No
           </label>
         </div>
       </div>
@@ -82,6 +79,13 @@ GOV.UK Prototype Kit
 
 
 </form>
+
+<script>
+    nextPageRoutes = {
+        'yes': 'spa',
+        'no': 'call-us',
+        }
+</script>
 
 
   {% endblock %}

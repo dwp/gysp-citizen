@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+
+
+                    <div class="govuk-grid-row">
+
+                      <div class="govuk-grid-column-two-thirds">
+                        <span class="govuk-caption-l">Request an invitation code
+                          <br></span>
+                        <h1 class="govuk-heading-xl">
+                          What is your date of birth?
+                        </h1>
+
+                            <div id="hint" class="govuk-hint">
+                              For example, 27 3 2007
+                            </div>
+                            <div class="govuk-date-input" id="passport-issued">
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="day">
+                                    Day
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day" name="day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="month">
+                                    Month
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="month" name="month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="year">
+                                    Year
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="year" name="year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                              </div>
+                            </div>
+
+                            <button class="govuk-button" data-module="govuk-button">
+                              Continue
+                            </button>
+
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                          </div>
+                          <div class="column-one-third">
+                            {% include 'includes/parts/helpstart.html' %}
+                          </div>
+                    </div>
+
+                    <br>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                          <b>URL, errors and notes</b>
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <b>URL:</b> /invite-request/date-of-birth<br>
+                          <b>Error messages: <br>
+                          Nothing entered - </b> Enter your date of birth<br>
+                          <b>Date incomplete -</b> Date of birth must include a Day<br>
+                          <b>Date incomplete -</b> Date of birth must include a Month<br>
+                          <b>Date incomplete -</b> Date of birth must include a Year<br>
+
+                          <b>Date cannot exist -</b> Date of brith must be a real date<br>
+                          <b>Future or todays date -</b> Date of birth must be in the past<br>
+
+                        </div>
+                      </details>
+
+
+</form>
+
+
+
+{% endblock %}

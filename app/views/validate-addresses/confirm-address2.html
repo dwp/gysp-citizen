@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="contact">
+<form method="post" >
 
  {{ govukBackLink ({
    text: 'Back',
@@ -44,7 +44,7 @@ GOV.UK Prototype Kit
           </label>
         </div>
          <div class="govuk-radios__item">
-           <input class="govuk-radios__input" id="address" name="address" type="radio" value="yes">
+           <input class="govuk-radios__input" id="address" name="address" type="radio" value="maybe">
            <label class="govuk-label govuk-radios__label" for="address">
              No, the format or spelling is wrong
            </label>
@@ -83,5 +83,12 @@ GOV.UK Prototype Kit
 
 </form>
 
+<script>
+    nextPageRoutes = {
+        'yes': 'spa',
+        'maybe': 'home-address',
+        'no': 'call-us',
+        }
+</script>
 
   {% endblock %}

@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Request an invitation code
+        <br></span>
+      <h1 class="govuk-heading-xl">
+        Check your details
+      </h1>
+      <h2 class="govuk-heading-l">
+        Your details
+      </h2>
+
+
+      <dl class="govuk-summary-list">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {{data['first-name']}} {{data['last-name']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="your-name">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['day']}}/{{data['month']}}/{{data['year']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="date-of-birth">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['address-line-1'] %}
+            {{data['address-line-1']}}<br>
+            {{data['address-line-2']}}<br>
+            {{data['address-town']}}<br>
+            {{data['address-postcode']}}
+            {% else %}
+            29 NEW STREET<br>SOUTHEND ON SEA<br>SS94 3JN
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="home-address">
+              Change<span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Request an invitation code
+      </button>
+
+      <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                      </div>
+                      <div class="column-one-third">
+                        {% include 'includes/parts/helpstart.html' %}
+                      </div>
+                    </div>
+
+      <p>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            <b>URL, errors and notes</b>
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <b>URL:</b> /invite-request/check-details-code  <br>
+
+          </div>
+        </details>
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+</form>
+
+
+  {% endblock %}

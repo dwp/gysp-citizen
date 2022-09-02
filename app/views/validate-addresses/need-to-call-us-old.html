@@ -1,0 +1,63 @@
++{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="your-date-of-birth">
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <span class="govuk-caption-l">Request an invitation code
+    <br></span>
+<h1 class="govuk-heading-xl">You need to call us</h1>
+
+<p class="govuk-body">
+We cannot send you an invitation code to claim online - call us to make a telephone claim for State Pension.</p>
+
+<!-- <p class="govuk-body">Call us to make a telephone claim for State Pension.</p> -->
+
+
+  <p class="govuk-body-m"><strong> Telephone: 0800 169 0154
+  <br> Textphone: 0800 169 0254</strong></p>
+<p class="govuk-body-m">Monday to Friday, 9:30am to 3:30pm (closed on public holidays)</p>
+
+  <h2 class="govuk-heading-m">If you cannot speak or hear on the phone</h2>
+
+  <p class="govuk-body-m"><a href="https://www.relayuk.bt.com" class="govuk-link" rel="noreferrer noopener" target="_blank">Relay UK (opens in a new tab)</a>: dial 18001 then 0800 169 0154</p>
+
+  <p class="govuk-body-m">British Sign Language users can <a href="https://dwpstatepensionth.signvideo.net" class="govuk-link" rel="noreferrer noopener" target="_blank">contact DWP using the video relay service on SignVideo (opens in a new tab)</a>.</p>
+
+  <p class="govuk-body-m"><a href="https://www.youtube.com/watch?v=Osx7FFxFpNY" class="govuk-link" rel="noreferrer noopener" target="_blank">Check how to use the video relay service (opens in a new tab)</a>.
+
+<p class="govuk-body-m">Monday to Friday, 9:30am to 3:30pm (closed on public holidays)
+
+</div>
+</div>
+
+<br>
+
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+<b>URL, errors and notes</b>
+</span>
+</summary>
+<div class="govuk-details__text">
+<b>URL:</b> /need-to-call-us <br>
+<a href="/invite-request/code-requested" class="govuk-link">Code requested screen</a><br>
+
+<a href="/invite-request/start" class="govuk-link">Start again</a><br>
+
+<b>Error messages:</b>
+</div>
+</details>
+
+
+</form>
+
+
+
+{% endblock %}
