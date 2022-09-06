@@ -33,11 +33,102 @@ router.post('/abroad/iteration-1/spa', (req, res) => {
     }
   });
 
+  //
+  router.post('/abroad/iteration-1/lived-add-another-country', function(req, res) {
+    if (req.body['another-lived'] === 'yes') {
+      res.redirect('lived-country-2');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+  router.post('/abroad/iteration-1/lived-country-2', (req, res) => {
+    res.redirect('/abroad/iteration-1/lived-add-another-country-2')
+  })
+  ;
+
+  router.post('/abroad/iteration-1/lived-add-another-country-2', function(req, res) {
+    if (req.body['another-lived-2'] === 'yes') {
+      res.redirect('lived-country-3');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+  router.post('/abroad/iteration-1/lived-country-3', (req, res) => {
+    res.redirect('/abroad/iteration-1/lived-add-another-country-3')
+  })
+  ;
+
+
+  router.post('/abroad/iteration-1/lived-add-another-country-3', function(req, res) {
+    if (req.body['another-lived-3'] === 'yes') {
+      res.redirect('lived-country-4');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+
+
   router.post('/abroad/iteration-1/lived-country-1', (req, res) => {
     res.redirect('/abroad/iteration-1/lived-add-another-country')
   })
   ;
 
+
+
+  //  Worked abroad yes/no
+  router.post('/abroad/iteration-1/worked-abroad', function(req, res) {
+    if (req.body['worked-abroad'] === 'yes') {
+      res.redirect('worked-country-1');
+    } else {
+      res.redirect('');
+    }
+  });
+
+  //
+  router.post('/abroad/iteration-1/worked-add-another-country', function(req, res) {
+    if (req.body['another-'] === 'yes') {
+      res.redirect('-country-2');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+  router.post('/abroad/iteration-1/-country-2', (req, res) => {
+    res.redirect('/abroad/iteration-1/-add-another-country-2')
+  })
+  ;
+
+  router.post('/abroad/iteration-1/-add-another-country-2', function(req, res) {
+    if (req.body['another--2'] === 'yes') {
+      res.redirect('-country-3');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+  router.post('/abroad/iteration-1/-country-3', (req, res) => {
+    res.redirect('/abroad/iteration-1/-add-another-country-3')
+  })
+  ;
+
+
+  router.post('/abroad/iteration-1/-add-another-country-3', function(req, res) {
+    if (req.body['another--3'] === 'yes') {
+      res.redirect('-country-4');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+
+
+  router.post('/abroad/iteration-1/-country-1', (req, res) => {
+    res.redirect('/abroad/iteration-1/-add-another-country')
+  })
+  ;
 
 
 
