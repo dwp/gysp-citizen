@@ -8,69 +8,49 @@ GOV.UK Prototype Kit
 
 <form method="post">
 
-  <a href="" class="govuk-back-link">Back</a>
+  <a href="marital-status" class="govuk-back-link">Back</a>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        How can we contact you?
+        How would you like to be contacted?
       </h1>
 
       <p>We may contact you if we need further information.</p>
-      <p class="govuk-hint">You must provide at least one phone number.</p>
 
+      <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+      <div id="contact-hint" class="govuk-hint">
+        You must provide at least one phone number.
+      </div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email"
-            data-aria-controls="conditional-contact">
+          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="home">
           <label class="govuk-label govuk-checkboxes__label" for="contact">
             Home phone
           </label>
         </div>
-        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Home phone number
-            </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email"
-              type="email" spellcheck="false"></div>
-
-        </div>
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone"
-            data-aria-controls="conditional-contact-2">
+          <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="mobile">
           <label class="govuk-label govuk-checkboxes__label" for="contact-2">
             Mobile phone
           </label>
         </div>
-        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-phone">
-              Mobile phone number <span class="govuk-hint">We may use text messages to update you about your claim.</span>
-            </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
-          </div>
-
-        </div>
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message"
-            data-aria-controls="conditional-contact-3">
+          <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="work">
           <label class="govuk-label govuk-checkboxes__label" for="contact-3">
             Work phone
           </label>
         </div>
-        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-text">
-              Work phone number
-            </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
-          </div>
-
-        </div>
       </div>
-      <br><br>
+
+    </fieldset>
+  </div>
+
+
+
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label">
@@ -81,7 +61,7 @@ GOV.UK Prototype Kit
         <input class="govuk-input govuk-input--width-20" type="text">
       </div>
 
-      <button class="govuk-button" data-module="govuk-button" href="language-speak">
+      <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
 
