@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+
+  {{ govukBackLink({
+            text: "Back",
+            href: "javascript:history.go(-1)"
+                            }) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-heading-xl">*Countries lived in outside of the UK*</h1>
+
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with this question
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">We need to know about:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>dates spent living outside the UK since the age of 16</li>
+                <li>dates for multiple periods spent living in one country</li>
+              </ul>
+
+              <p class="govuk-body">We do not need to know about:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>time spent serving overseas with the British armed forces</li>
+                <li>holidays in non-UK countries</li>
+              </ul>
+          </div>
+        </details>
+
+<br><br>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Country name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">From:</p>
+      <p class="govuk-body">To:</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> contact details</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Country name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">From:</p>
+      <p class="govuk-body">To:</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> contact details</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Country name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">From:</p>
+      <p class="govuk-body">To:</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> contact details</span>
+      </a>
+    </dd>
+  </div>
+
+
+
+</dl>
+
+    </div>
+
+      <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="another-lived-2-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+        Do you need to add another period living outside of the UK?
+      </legend>
+      <br>
+      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="another-lived-2" name="another-lived-2" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="another-lived-2">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="another-lived-2-2" name="another-lived-2" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="another-lived-2-2">
+            No
+          </label>
+        </div>
+      </div>
+      </div
+
+<div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% include 'includes/parts/help.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+  {% endblock %}

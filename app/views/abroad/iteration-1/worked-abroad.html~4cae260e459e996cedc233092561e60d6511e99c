@@ -6,12 +6,9 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post">
+<form method="post" action="marital-status">
 
-  {{ govukBackLink({
-            text: "Back",
-            href: "javascript:history.go(-1)"
-                            }) }}
+  <a href="lived-abroad" class="govuk-back-link">Back</a>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -19,20 +16,21 @@ GOV.UK Prototype Kit
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label">
-            <p class="govuk-heading-xl">Have you lived outside the UK since the age of 16?</p>
+            <p class="govuk-heading-xl">Have you worked outside the UK since the age of 16?</p>
+           <!-- <p class="govuk-hint">This does not include time spent serving overseas with the British armed forces.<br>
+            </p> --> 
           </label>
         </h1>
-        
         <div class="govuk-radios govuk-radios--inline">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="lived-abroad" name="lived-abroad" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="lived-abroad">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
               Yes
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="lived-abroad-2" name="lived-abroad" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="lived-abroad-2">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
               No
             </label>
           </div>
@@ -47,18 +45,18 @@ GOV.UK Prototype Kit
           <div class="govuk-details__text">
             <p class="govuk-body">If you select yes we will ask you for:</p>
               <ul class="govuk-list govuk-list--bullet">
-                <li>dates spent living outside the UK since the age of 16</li>
-                <li>dates for multiple periods spent living in one country</li>
+                <li>dates spent working outside the UK since the age of 16</li>
+                <li>dates for multiple periods spent working in one country</li>
+                <li>any non-UK social security or National Insurance numbers you have</li>
               </ul>
 
               <p class="govuk-body">We do not need to know about:</p>
               <ul class="govuk-list govuk-list--bullet">
                 <li>time spent serving overseas with the British armed forces</li>
-                <li>holidays in non-UK countries</li>
+                <li>short periods working abroad where you were paid by a UK company</li>
               </ul>
           </div>
         </details>
-
 
       <button class="govuk-button" data-module="govuk-button">
         Continue

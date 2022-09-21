@@ -8,7 +8,7 @@ GOV.UK Prototype Kit
 
 <form method="post" action="widow-dom">
 
-  <a href="worked-abroad" class="govuk-back-link">Back</a>
+  <a href="widow-dom" class="govuk-back-link">Back</a>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -41,7 +41,7 @@ GOV.UK Prototype Kit
         <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
       </div>
 
-    <p>  <a href="#" class="govuk-link govuk-link--no-visited-state">Add name</a></p>
+    <p>  <a href="#" class="govuk-link govuk-link--no-visited-state">Add another name</a></p>
     <div class="govuk-date-input" id="date-of-birth">
       <h3 class="govuk-heading-s">Their date of birth</h3>
       <div class="govuk-date-input__item">
@@ -100,36 +100,6 @@ GOV.UK Prototype Kit
     </div>
 
 
-    <div class="govuk-date-input" id="date-of-birth">
-      <h3 class="govuk-heading-s">What date did they die?
-</h3>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
-            Day
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" inputmode="numeric">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
-            Month
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" inputmode="numeric">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
-            Year
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" inputmode="numeric">
-        </div>
-      </div>
-    </div>
-
-
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
@@ -141,12 +111,12 @@ GOV.UK Prototype Kit
       </span>
       </summary>
       <div class="govuk-details__text">
-      <b>URL:</b> use existing <br><br>
+      <b>URL:</b> use existing <br>
 
 
-      <b>Error messages:
-        <br>  <br>
-        Their first name<br>  <br>
+      <h3>Error messages:</h3>
+<p>
+        <b>Their first name<br>  <br>
           Empty - </b> Enter their first name	<br>
 <b>Invalid	-</b> First name must start with a letter and only include letters, hyphens, apostrophes, full stops and spaces<br>
 <b>Length -</b>	First name must be 70 characters or less
@@ -154,30 +124,60 @@ GOV.UK Prototype Kit
 
 
         <br>  <br>
-      <b>  Their surname<br>  <br>
+      <b>  Their Last name<br>  <br>
         Empty - </b>	Enter their surname<br>
-        <b>Invalid	-</b>	Suname must start with a letter and only include letters, hyphens, apostrophes, full stops and spaces<br>
-        <b>Length -</b>	Surname must be 70 characters or less      <br>  <br>
+        <b>Invalid	-</b>	Last name must start with a letter and only include letters, hyphens, apostrophes, full stops and spaces<br>
+        <b>Length -</b>	Last name must be 70 characters or less      <br>  <br>
 
     <b>  Date of birth<br>  <br>
-      Empty - </b> Enter a date of birth<br>
-      <b>Incomplete - </b>Date of birth must include a day, month and year<br>
+      Incomplete - </b>Date of birth must include a day, month and year<br>
       <b>Invalid characters - </b>Enter a real date, like 12 2 2019<br>
-      <b>Invalid date - </b>Date of birth must be earlier than the date you got married or formed a civil partnership and the date they died<br><br>
+      <b>Date in future - </b>Date of birth must be in the past<br><br>
+
+
 
      <b>Date of marriage or civil partnership
 <br>  <br>
-Incomplete - </b>The date you got married or formed a civil partnership must include a day, month and year<br>
+Incomplete - </b>Date of marriage or civil partnership must include a day, month and year<br>
 <b>Invalid characters - </b>Enter a real date, like 12 2 2019<br>
-<b>Invalid date - </b>The date you got or formed a civil partnership must be later than their date of birth and earlier than the date they died<br><br>
+<b>Date in future - </b>Date of marriage or civil partnership must be in the past</p><br>
 
-      <b>Date of death
-      <br>  <br>
-      Empty - </b> Enter a date of death<br>
-      <b>Incomplete - </b>Date of death must include a day, month and year<br>
-      <b>Invalid characters - </b>Enter a real date, like 12 2 2019<br>
-      <b>Invalid date - </b>Date they died must be later than the date of birth and the date of marriage or civil partnership<br>
-      </div>
+
+<h3>Welsh translation:</h3>
+
+<b>Am eich gwr, gwraig neu bartner sifil
+<br><br><br>Eu henw cyntaf<br><br>
+Eu henw olaf<br><br>
+Enw arall<br></b>
+<p>Dylech gynnwys enw cyn priodi, hen enwau priod a newidiadau i enw teuluol.</p>
+<p> <a href="#">Ychwanegu enw arall</a></p>
+<p><b>Eu dyddiad geni<br><br>
+  Pryd wnaethoch chi briodi neu ffurfio partneriaeth sifil? (dewisol)</b></p><br><br>
+
+<h3>Error messages (welsh):</h3>
+
+
+<b>Eu henw cyntaf<br><br>
+Empty -</b> Rhowch eu henw cyntaf<br>
+<b>Invalid -</b> Mae'n rhaid i'r enw cyntaf ddechrau gyda llythyren a dim ond cynnwys llythrennau, cysylltnodau, collnodau, atalnodau llawn a gofodau<br>
+<b>Length - </b>Mae'n rhaid i'r enw cyntaf fod yn 70 nod neu lai<br><br>
+
+<b>Eu henw olaf<br><br>
+Empty -</b> Rhowch eu henw olaf<br>
+<b>Invalid -</b> Mae'n rhaid i'r enw olaf ddechrau gyda llythyren a dim ond cynnwys llythrennau, cysylltnodau, collnodau, atalnodau llawn a gofodau<br>
+<b>Length - </b>Mae'n rhaid i'r enw olaf fod yn 70 nod neu lai<br><br>
+
+<b>Eu dyddiad geni<br><br>
+Incomplete -</b> Mae'n rhaid i ddyddiad geni gynnwys diwrnod, mis a blwyddyn<br>
+<b>Invalid -</b>Rhowch ddyddiad gwirioneddol, fel 12 2 2019<br>
+<b>Date in future - </b>Mae'n rhaid i ddyddiad geni fod yn y gorffennol<br><br>
+
+<b>Pryd wnaethoch chi briodi neu ffurfio partneriaeth sifil? (dewisol)<br><br>
+  Incomplete -</b>Mae'n rhaid i ddyddiad priodas neu ffurfio partneriaeth sifil gynnwys diwrnod, mis a blwyddyn<br>
+  <b>Invalid -</b>Rhowch ddyddiad gwirioneddol, fel 12 2 2019<br>
+  <b>Date in future - </b>Mae'n rhaid i ddyddiad priodas neu ffurfio partneriaeth sifil fod yn y gorffennol<br><br>
+
+</div>
       </details>
 
     </div>

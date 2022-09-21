@@ -20,6 +20,8 @@ const inviterequest = require('./routes/inviterequest');
 const claimfromdate = require('./routes/claimfromdate');
 const welsh = require('./routes/welsh');
 const validateaddresses = require('./routes/validateaddresses');
+const abroad = require('./routes/abroad');
+
 
 //copy the router use and update the sprint version
 router.use(altformats);
@@ -30,6 +32,7 @@ router.use(inviterequest);
 router.use(claimfromdate);
 router.use(welsh);
 router.use(validateaddresses);
+router.use(abroad);
 
 
 
