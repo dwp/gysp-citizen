@@ -83,50 +83,55 @@ router.post('/abroad/iteration-1/spa', (req, res) => {
     if (req.body['worked-abroad'] === 'yes') {
       res.redirect('worked-country-1');
     } else {
-      res.redirect('');
+      res.redirect('marital-status');
     }
   });
+
+  router.post('/abroad/iteration-1/worked-country-1', (req, res) => {
+    res.redirect('/abroad/iteration-1/worked-add-another-country')
+  })
+  ;
 
   //
   router.post('/abroad/iteration-1/worked-add-another-country', function(req, res) {
-    if (req.body['another-'] === 'yes') {
-      res.redirect('-country-2');
+    if (req.body['another-worked'] === 'yes') {
+      res.redirect('worked-country-2');
     } else {
-      res.redirect('worked-abroad');
+      res.redirect('marital-status');
     }
   });
 
-  router.post('/abroad/iteration-1/-country-2', (req, res) => {
-    res.redirect('/abroad/iteration-1/-add-another-country-2')
+  router.post('/abroad/iteration-1/worked-country-2', (req, res) => {
+    res.redirect('/abroad/iteration-1/worked-add-another-country-2')
   })
   ;
 
-  router.post('/abroad/iteration-1/-add-another-country-2', function(req, res) {
-    if (req.body['another--2'] === 'yes') {
-      res.redirect('-country-3');
+  router.post('/abroad/iteration-1/worked-add-another-country-2', function(req, res) {
+    if (req.body['another-worked-2'] === 'yes') {
+      res.redirect('worked-country-3');
     } else {
-      res.redirect('worked-abroad');
+      res.redirect('marital-status');
     }
   });
 
-  router.post('/abroad/iteration-1/-country-3', (req, res) => {
-    res.redirect('/abroad/iteration-1/-add-another-country-3')
+  router.post('/abroad/iteration-1/worked-country-3', (req, res) => {
+    res.redirect('/abroad/iteration-1/worked-add-another-country-3')
   })
   ;
 
 
-  router.post('/abroad/iteration-1/-add-another-country-3', function(req, res) {
-    if (req.body['another--3'] === 'yes') {
-      res.redirect('-country-4');
+  router.post('/abroad/iteration-1/worked-add-another-country-3', function(req, res) {
+    if (req.body['another-worked-3'] === 'yes') {
+      res.redirect('worked-country-4');
     } else {
-      res.redirect('worked-abroad');
+      res.redirect('marital-status');
     }
   });
 
 
 
-  router.post('/abroad/iteration-1/-country-1', (req, res) => {
-    res.redirect('/abroad/iteration-1/-add-another-country')
+  router.post('/abroad/iteration-1/worked-country-1', (req, res) => {
+    res.redirect('/abroad/iteration-1/worked-add-another-country')
   })
   ;
 
