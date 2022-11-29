@@ -34,6 +34,17 @@ router.post('/abroad/iteration-0/spa', (req, res) => {
     }
   });
 
+  router.post('/abroad/iteration-0/lived-countries', (req, res) => {
+    res.redirect('/abroad/iteration-0/lived-country-1')
+  })
+  ;
+
+
+  router.post('/abroad/iteration-0/lived-country-1', (req, res) => {
+    res.redirect('/abroad/iteration-0/worked-abroad')
+  })
+  ;
+
   //
   router.post('/abroad/iteration-0/lived-add-another-country', function(req, res) {
     if (req.body['another-lived'] === 'yes') {
