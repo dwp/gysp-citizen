@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<form method="post" action="lived-abroad">
+<form method="post" >
 
   <a href="your-details" class="govuk-back-link">Back</a>
 
@@ -23,7 +23,7 @@ GOV.UK Prototype Kit
           </legend>
           <br>
           <div id="prison-hint" class="govuk-hint">
-          
+
           </div>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
@@ -46,7 +46,24 @@ GOV.UK Prototype Kit
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
+
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+              <b>URL, errors and notes</b>
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <b>URL:</b> use existing <br>
+              <b>Error messages: <br>
+              Nothing selected:</b> Select yes if you have spent any time in prison since 12 April 2021 [SPa]<br>
+
+              <b>Notes:</b> None <br>
+            </div>
+          </details>
+<br><br><br><br><br><br>
     </div>
 
     <div class="column-one-third">
@@ -58,6 +75,13 @@ GOV.UK Prototype Kit
 
 
 </form>
+
+<script>
+    nextPageRoutes = {
+        'yes': 'prison-date',
+        'no': 'lived-abroad',
+        }
+</script>
 
 
   {% endblock %}
