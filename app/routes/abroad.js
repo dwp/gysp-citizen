@@ -3,6 +3,72 @@ const router = express.Router()
 
 
 
+// ------------------------- ITERATION 0 -------------------------
+
+router.post('/abroad/iteration-0/confirm-identity', function(req, res) {
+  if (req.body['invite-code'] === 'yes') {
+    res.redirect('your-details');
+  } else {
+    res.redirect('request');
+  }
+});
+
+
+
+router.post('/abroad/iteration-0/your-details', (req, res) => {
+  res.redirect('/abroad/iteration-0/spa')
+})
+;
+
+router.post('/abroad/iteration-0/spa', (req, res) => {
+  res.redirect('/abroad/iteration-0/lived-abroad')
+})
+;
+
+  //  Lived abroad yes/no
+  router.post('/abroad/iteration-0/lived-abroad', function(req, res) {
+    if (req.body['lived-abroad'] === 'yes') {
+      res.redirect('lived-countries');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+  //
+  router.post('/abroad/iteration-0/lived-add-another-country', function(req, res) {
+    if (req.body['another-lived'] === 'yes') {
+      res.redirect('lived-country-2');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+
+  router.post('/abroad/iteration-0/lived-add-another-country-2', function(req, res) {
+    if (req.body['another-lived-2'] === 'yes') {
+      res.redirect('lived-country-3');
+    } else {
+      res.redirect('worked-abroad');
+    }
+  });
+
+
+
+
+  //  Worked abroad yes/no
+  router.post('/abroad/iteration-0/worked-abroad', function(req, res) {
+    if (req.body['worked-abroad'] === 'yes') {
+      res.redirect('worked-countries');
+    } else {
+      res.redirect('marital-status');
+    }
+  });
+
+
+
+
+// ------------------------- ITERATION 1 -------------------------------
+
 // Confirming identity
 router.post('/abroad/iteration-1/confirm-identity', function(req, res) {
   if (req.body['invite-code'] === 'yes') {
