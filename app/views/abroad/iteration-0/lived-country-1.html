@@ -36,14 +36,6 @@ GOV.UK Prototype Kit
             <div class="govuk-date-input" id="passport-issued">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                     Month
                   </label>
@@ -67,14 +59,6 @@ GOV.UK Prototype Kit
               </h1>
             </legend>
             <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
@@ -120,13 +104,16 @@ GOV.UK Prototype Kit
 
           From</b><br>
             Empty: Enter the date you lived in Italy from<br>
-            Invalid: The date you lived in Italy from must include a day, month and year<br>
-            Invalid: The date you lived in Italy from must be before the to date<br><br>
+            Invalid: The date you lived in Italy from must include a month and year<br>
+            Invalid: The from date must be before the to date<br>
+            Future: The date you lived in Italy from must be in the past <br><br>
 
       <b>To</b><br>
             Empty: Enter the date you lived in Italy to<br>
-            Invalid: The date you lived in Italy to must include a day, month and year<br>
-            Invalid: The date you lived in Italy to must be after the from date
+            Invalid: The date you lived in Italy to must include a month and year<br>
+            Invalid: The to date must be after the from date<br>
+            Future: The date you lived in Italy to must be in the past
+
       </div>
       </details>
     </div> </div>

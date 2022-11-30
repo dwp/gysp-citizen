@@ -39,14 +39,6 @@ GOV.UK Prototype Kit
             <div class="govuk-date-input" id="passport-issued">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                     Month
                   </label>
@@ -71,14 +63,6 @@ GOV.UK Prototype Kit
               </h1>
             </legend>
             <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
@@ -134,17 +118,19 @@ GOV.UK Prototype Kit
         Error messages:<br><br>
 
           From</b><br>
-            Empty: Enter the date you lived here from<br>
-            Invalid: The date you lived here from must include a day, month and year<br>
-            Invalid: The date you lived here from must be before the date you lived here to<br><br>
+            Empty: Enter the date you worked in Italy from<br>
+            Invalid: The date you worked in Italy from must include a month and year<br>
+            Invalid: The from date must be before the to date<br>
+            Future: The date you worked in Italy from must be in the past <br><br>
 
       <b>To</b><br>
-            Empty: Enter the date you lived here to<br>
-            Invalid: The date you lived here to must include a day, month and year<br>
-            Invalid: The date you lived here to must be after the date you lived here from<br><br>
+            Empty: Enter the date you worked in Italy to<br>
+            Invalid: The date you worked in Italy to must include a month and year<br>
+            Invalid: The to date must be after the from date<br>
+            Future: The date you worked in Italy to must be in the past<br><br>
       <b>Social security number</b><br>
             Empty: Enter a social security number<br>
-            Invalid: Social security number must only include letters a to z, numbers, hyphens, spaces, forward slashes and full stops<br>
+            Invalid: Social security number must only include letters, numbers, hyphens, spaces, forward slashes and full stops<br>
             Length: Social security number must be 24 characters long or less<br>
                     <br>
       </div>
