@@ -24,7 +24,7 @@ GOV.UK Prototype Kit
           <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-                When did you live here?
+                When did you live in Italy?
               </h1>
             </legend>
             <br>
@@ -60,8 +60,7 @@ GOV.UK Prototype Kit
               </div>
             </div>
 
-            <br><br>
-
+            <br>
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
                 To
@@ -95,20 +94,13 @@ GOV.UK Prototype Kit
             </div>
 
           </fieldset>
-        </div>
+        </div> <br><br><br>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Did you pay the equivalent of National Insurance here?
+          </h1>
 
-
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="width-20">
-            What was your social security number in [country]?
-          </label>
-          <div id="event-name-hint" class="govuk-hint">
-            This is similar to your UK National Insurance number.
-          </div>
-          <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
-        </div>
-
-    </div>
+        </legend>
 
 
       <button class="govuk-button" data-module="govuk-button">
@@ -124,23 +116,20 @@ GOV.UK Prototype Kit
       </summary>
       <div class="govuk-details__text">
       <b>URL: <br><br>
-  Error messages:<br><br>    From</b>
+        Error messages:<br><br>
 
-  <br>Empty: Enter date you lived here from<br>
-  Invalid: The date you lived here from must include a day, month and year<br>
-  Invalid:   The date you lived here from must be before the date you lived here to<br><br>
-          <b>To</b>
-          <br>Empty: Enter date you lived here to<br>
-          Invalid: The date you lived here to must include a day, month and year<br>
-        Invalid:   The date you lived here to must be after the date you lived here from<br><br>
-                    <b>Social security number</b>
-                    <br>Empty: Enter a social security number<br>
-                    Invalid: Social security number must only include letters a to z, numbers, hyphens, spaces, forward slashes and full stops<br>
-                    Length: Social security number must be 24 characters long or less<br>
-                    <br>
+          From</b><br>
+            Empty: Enter the date you lived in Italy from<br>
+            Invalid: The date you lived in Italy from must include a day, month and year<br>
+            Invalid: The date you lived in Italy from must be before the to date<br><br>
+
+      <b>To</b><br>
+            Empty: Enter the date you lived in Italy to<br>
+            Invalid: The date you lived in Italy to must include a day, month and year<br>
+            Invalid: The date you lived in Italy to must be after the from date
       </div>
       </details>
-    </div>
+    </div> </div>
 
     <div class="govuk-grid-column-one-third">
       {% include 'includes/parts/help.html' %}

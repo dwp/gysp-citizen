@@ -18,25 +18,18 @@ GOV.UK Prototype Kit
 
       <div class="govuk-form-group">
         <span class="govuk-caption-xl">Country 1 of 1</span>
-        <h1 class="govuk-heading-xl">What country have you worked in?</h1>
-
-
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="width-20">
-
-          </label>
-          <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
-        </div>
-
-<br><br>
+        <h1 class="govuk-heading-xl">Italy</h1>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-                When did you live there?
+                When did you work in Italy?
               </h1>
             </legend>
+
+
+
             <br>
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
@@ -113,13 +106,49 @@ GOV.UK Prototype Kit
 
     <br>
     <br>
+    <div class="govuk-form-group">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h2 class="govuk-fieldset__heading">What is your social security number in Italy?</h2>
+    </legend>
+      <div id="event-name-hint" class="govuk-hint">
+        This is similar to your UK National Insurance number.
+      </div>
+      <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+    </div>
+
 
 
 
       <button class="govuk-button" data-module="govuk-button">
         Continue
       </button>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+      <b>URL, errors and notes</b>
+      </span>
+      </summary>
+      <div class="govuk-details__text">
+      <b>URL: <br><br>
+        Error messages:<br><br>
 
+          From</b><br>
+            Empty: Enter the date you lived here from<br>
+            Invalid: The date you lived here from must include a day, month and year<br>
+            Invalid: The date you lived here from must be before the date you lived here to<br><br>
+
+      <b>To</b><br>
+            Empty: Enter the date you lived here to<br>
+            Invalid: The date you lived here to must include a day, month and year<br>
+            Invalid: The date you lived here to must be after the date you lived here from<br><br>
+      <b>Social security number</b><br>
+            Empty: Enter a social security number<br>
+            Invalid: Social security number must only include letters a to z, numbers, hyphens, spaces, forward slashes and full stops<br>
+            Length: Social security number must be 24 characters long or less<br>
+                    <br>
+      </div>
+      </details>
     </div>
 
     <div class="govuk-grid-column-one-third">
