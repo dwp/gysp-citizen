@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form method="post">
+
+  {{ govukBackLink({
+            text: "Back",
+            href: "javascript:history.go(-1)"
+                            }) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        How would you like to be contacted?
+      </h1>
+
+      <p>We may contact you if we need further information.</p>
+
+      <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+      <div id="contact-hint" class="govuk-hint">
+        You must provide at least one phone number.
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="home">
+          <label class="govuk-label govuk-checkboxes__label" for="contact">
+            Home phone
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="mobile">
+          <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+            UK mobile phone
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="work">
+          <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+            Work phone
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label">
+            <b>Email address</b>
+            <p class="govuk-hint">We'll use this to confirm we've received your application.</p>
+          </label>
+        </h1>
+        <input class="govuk-input govuk-input--width-20" type="text">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+            <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            <b>URL, errors and notes</b>
+            </span>
+            </summary>
+            <div class="govuk-details__text">
+            <b>URL:</b> <br><br>
+            <b>Error messages:<br>
+              Nothing selected:</b> Select at least one phone number we can contact you on<br>
+<br>
+<b>Home phone</b><br>
+            Empty: Enter a home phone number<br>
+            Length: Home phone number should be less than 70 numbers<br>
+            Invalid: Enter a telephone number, like 01632 960 001
+            <br><br>
+<b>UK mobile phone</b><br>
+            Empty: Enter a UK mobile phone number<br>
+              Length: UK mobile phone number must be 11 numbers<br>
+              Invalid: Enter a UK mobile phone number, like 07700 900 982
+<br><br>
+<b>Work phone</b><br>
+Empty: Enter a work phone number<br>
+Length: Work phone number should be less than 70 numbers<br>
+Invalid: Enter a telephone number, like 01632 960 001 or 07700 900 982
+                          <br><br>
+<b>Email address</b><br>
+Empty: Enter an email address<br>
+Length: Email address must be 100 characters or less<br>
+Invalid: Enter an email address in the correct format, like name@example.com<br><br>
+
+
+<b><u>Welsh translation</u><br><br>
+Error messages:<br>
+Nothing selected:</b> Dewiswch o leiaf un rhif ffôn y gallwn gysylltu â chi arno<br>
+<br>
+<b>Home phone</b><br>
+Empty: Rhowch rif ffôn cartref<br>
+Length: Home phone number should 70 numbers or less<br>
+Invalid: Enter a telephone number, like 01632 960 001
+<br><br>
+<b>UK mobile phone</b><br>
+Empty: Enter a UK mobile phone number<br>
+Length: UK mobile phone number must be 11 numbers<br>
+Invalid: Enter a UK mobile phone number, like 07700 900 982
+<br><br>
+<b>Work phone</b><br>
+Empty: Rhowch rif ffôn gwaith<br>
+Length: Work phone number should 70 numbers or less<br>
+Invalid: Enter a telephone number, like 01632 960 001 or 07700 900 982
+            <br><br>
+<b>Email address</b><br>
+Empty: Rhowch gyfeiriad e-bost<br>
+Length: Rhaid i gyfeiriad e-bost fod yn 100 nod neu lai<br>
+Invalid: Rhowch gyfeiriad e-bost yn y fformat cywir, fel name@example.com
+
+
+
+
+           </div>
+            </details>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% include 'includes/parts/help.html' %}
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+{% endblock %}
